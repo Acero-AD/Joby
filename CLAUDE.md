@@ -9,6 +9,7 @@ A job application tracker for software engineers, evolving into a job search eng
 - Bun 1.0.1 for JavaScript bundling
 - PostgreSQL
 - Kamal for deployment
+- Better Stack for observability (logging, uptime monitoring, error tracking, status page)
 
 ## Development Commands
 
