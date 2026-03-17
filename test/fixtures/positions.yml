@@ -1,0 +1,9 @@
+rails_dev:
+  user: jane
+  url: https://company.com/jobs/rails-dev
+  status: bookmarked
+
+applied_position:
+  user: jane
+  url: https://other.com/jobs/backend
+  status: applied
