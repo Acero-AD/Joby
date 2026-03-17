@@ -1,5 +1,6 @@
 import path from 'path';
 import fs from 'fs';
+import { $ } from "bun";
 
 const config = {
   sourcemap: "external",
@@ -7,30 +8,53 @@ const config = {
   outdir: path.join(process.cwd(), "app/assets/builds"),
 };
 
-const build = async (config) => {
+const buildJS = async () => {
   const result = await Bun.build(config);
 
   if (!result.success) {
-    if (process.argv.includes('--watch')) {
-      console.error("Build failed");
-      for (const message of result.logs) {
-        console.error(message);
-      }
-      return;
-    } else {
-      throw new AggregateError(result.logs, "Build failed");
+    console.error("JS build failed");
+    for (const message of result.logs) {
+      console.error(message);
     }
+    return false;
+  }
+  return true;
+};
+
+const buildCSS = async () => {
+  try {
+    await $`bunx @tailwindcss/cli -i app/assets/stylesheets/application.css -o app/assets/builds/application.css`.quiet();
+    return true;
+  } catch (e) {
+    console.error("CSS build failed:", e.message);
+    return false;
   }
 };
 
+const buildAll = async () => {
+  await Promise.all([buildJS(), buildCSS()]);
+};
+
 (async () => {
-  await build(config);
+  await buildAll();
 
   if (process.argv.includes('--watch')) {
-    fs.watch(path.join(process.cwd(), "app/javascript"), { recursive: true }, (eventType, filename) => {
-      console.log(`File changed: ${filename}. Rebuilding...`);
-      build(config);
-    });
+    const dirs = [
+      path.join(process.cwd(), "app/javascript"),
+      path.join(process.cwd(), "app/assets/stylesheets"),
+    ];
+
+    for (const dir of dirs) {
+      fs.watch(dir, { recursive: true }, (eventType, filename) => {
+        if (filename?.endsWith('.css')) {
+          console.log(`CSS changed: ${filename}. Rebuilding...`);
+          buildCSS();
+        } else {
+          console.log(`JS changed: ${filename}. Rebuilding...`);
+          buildJS();
+        }
+      });
+    }
   } else {
     process.exit(0);
   }
