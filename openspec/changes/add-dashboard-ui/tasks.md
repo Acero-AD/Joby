@@ -39,5 +39,5 @@
 
 ## 6. Testing & Polish
 
-- [ ] 6.1 Add controller tests for `DashboardController` and `PositionsController`
-- [ ] 6.2 Run full test suite and confirm all tests pass
+- [x] 6.1 Add controller tests for `DashboardController` and `PositionsController`
+- [x] 6.2 Run full test suite and confirm all tests pass
