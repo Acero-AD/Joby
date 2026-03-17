@@ -4,7 +4,7 @@ import { $ } from "bun";
 
 const config = {
   sourcemap: "external",
-  entrypoints: ["app/javascript/application.jsx"],
+  entrypoints: ["app/javascript/application.tsx"],
   outdir: path.join(process.cwd(), "app/assets/builds"),
 };
 
