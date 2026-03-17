@@ -7,11 +7,11 @@
 
 ## 2. Dashboard Layout
 
-- [ ] 2.1 Create `DashboardController#index` that loads positions (paginated), computes stats, and renders via Inertia
-- [ ] 2.2 Build the Dashboard page component with the two-column layout (left content + 280px right sidebar)
-- [ ] 2.3 Build the Sidebar component (logo, navigation with NavItem components, user profile section)
-- [ ] 2.4 Build the Header component (welcome message, search box, "Add Application" button)
-- [ ] 2.5 Set up routes: root to `dashboard#index`, resourceful routes for positions
+- [x] 2.1 Create `DashboardController#index` that loads positions (paginated), computes stats, and renders via Inertia
+- [x] 2.2 Build the Dashboard page component with the two-column layout (left content + 280px right sidebar)
+- [x] 2.3 Build the Sidebar component (logo, navigation with NavItem components, user profile section)
+- [x] 2.4 Build the Header component (welcome message, search box, "Add Application" button)
+- [x] 2.5 Set up routes: root to `dashboard#index`, resourceful routes for positions
 
 ## 3. Reusable Components
 
