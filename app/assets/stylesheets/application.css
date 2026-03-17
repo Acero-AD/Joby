@@ -1,10 +1,47 @@
-/*
- * This is a manifest file that'll be compiled into application.css.
- *
- * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
- * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
- * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
- * depending on specificity.
- *
- * Consider organizing styles into separate files for maintainability.
- */
+@import "tailwindcss";
+
+@theme {
+  /* Primary brand gradient colors */
+  --color-primary-purple: #A855F7;
+  --color-primary-pink: #EC4899;
+
+  /* Background gradient */
+  --color-bg-start: #FAF5FF;
+  --color-bg-mid1: #FDF2F8;
+  --color-bg-mid2: #F9FAFB;
+  --color-bg-end: #F5F3FF;
+
+  /* Surface */
+  --color-surface-white: #FFFFFF;
+  --color-surface-light: #FAFAFA;
+  --color-surface-dark: #18181B;
+
+  /* Text */
+  --color-text-primary: #1F1F1F;
+  --color-text-secondary: #374151;
+  --color-text-muted: #6B7280;
+  --color-text-light: #9CA3AF;
+
+  /* Borders */
+  --color-border-light: #F3F4F6;
+  --color-border-medium: #E5E7EB;
+  --color-border-purple: #E9D5FF;
+
+  /* Status colors */
+  --color-status-interview-bg: #FEF3C7;
+  --color-status-interview-text: #D97706;
+  --color-status-offer-bg: #D1FAE5;
+  --color-status-offer-text: #059669;
+  --color-status-rejected-bg: #FEE2E2;
+  --color-status-rejected-text: #DC2626;
+  --color-status-applied-bg: #E0E7FF;
+  --color-status-applied-text: #4F46E5;
+  --color-status-bookmarked-bg: #F3F0FF;
+  --color-status-bookmarked-text: #7C3AED;
+  --color-status-success: #10B981;
+  --color-status-warning: #F59E0B;
+  --color-status-danger: #EF4444;
+
+  /* Font */
+  --font-sans: "Inter", sans-serif;
+}
