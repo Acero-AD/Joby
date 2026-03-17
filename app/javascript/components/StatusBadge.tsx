@@ -1,6 +1,10 @@
 import React from 'react'
 
-const statusStyles = {
+interface StatusBadgeProps {
+  status: string
+}
+
+const statusStyles: Record<string, { bg: string; text: string; label: string }> = {
   bookmarked: { bg: '#F3F0FF', text: '#7C3AED', label: 'Bookmarked' },
   applied: { bg: '#E0E7FF', text: '#4F46E5', label: 'Applied' },
   interviewing: { bg: '#FEF3C7', text: '#D97706', label: 'Interview' },
@@ -10,7 +14,7 @@ const statusStyles = {
   accepted: { bg: '#D1FAE5', text: '#059669', label: 'Accepted' },
 }
 
-export default function StatusBadge({ status }) {
+export default function StatusBadge({ status }: StatusBadgeProps) {
   const style = statusStyles[status] || statusStyles.bookmarked
 
   return (

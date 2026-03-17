@@ -1,7 +1,12 @@
 import React from 'react'
 import NavItem from './NavItem'
+import type { User } from '../types'
 
-export default function Sidebar({ user }) {
+interface SidebarProps {
+  user: User | null
+}
+
+export default function Sidebar({ user }: SidebarProps) {
   const navItems = [
     { icon: 'layout-dashboard', label: 'Dashboard', active: true },
     { icon: 'briefcase', label: 'Applications' },

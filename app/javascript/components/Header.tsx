@@ -1,6 +1,12 @@
 import React from 'react'
+import type { User } from '../types'
 
-export default function Header({ user, onAddClick }) {
+interface HeaderProps {
+  user: User | null
+  onAddClick: () => void
+}
+
+export default function Header({ user, onAddClick }: HeaderProps) {
   const firstName = user?.name?.split(' ')[0] || 'there'
 
   return (

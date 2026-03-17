@@ -1,7 +1,12 @@
 import React from 'react'
 import StatCard from './StatCard'
+import type { Stats } from '../types'
 
-export default function StatsRow({ stats }) {
+interface StatsRowProps {
+  stats: Stats
+}
+
+export default function StatsRow({ stats }: StatsRowProps) {
   return (
     <div className="flex gap-5">
       <StatCard

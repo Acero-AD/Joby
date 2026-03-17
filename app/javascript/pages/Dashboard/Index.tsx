@@ -5,8 +5,9 @@ import StatsRow from '../../components/StatsRow'
 import ApplicationsTable from '../../components/ApplicationsTable'
 import RightSidebar from '../../components/RightSidebar'
 import AddApplicationModal from '../../components/AddApplicationModal'
+import type { DashboardProps } from '../../types'
 
-export default function DashboardIndex({ user, positions, stats, pagination }) {
+export default function DashboardIndex({ user, positions, stats, pagination }: DashboardProps) {
   const [showModal, setShowModal] = useState(false)
 
   return (

@@ -1,6 +1,10 @@
 import React from 'react'
 import { useForm } from '@inertiajs/react'
 
+interface AddApplicationModalProps {
+  onClose: () => void
+}
+
 const statuses = [
   { value: 'bookmarked', label: 'Bookmarked' },
   { value: 'applied', label: 'Applied' },
@@ -11,16 +15,16 @@ const statuses = [
   { value: 'accepted', label: 'Accepted' },
 ]
 
-export default function AddApplicationModal({ onClose }) {
+export default function AddApplicationModal({ onClose }: AddApplicationModalProps) {
   const { data, setData, post, processing, errors } = useForm({
     title: '',
     company: '',
     url: '',
     status: 'bookmarked',
-    cv: null,
+    cv: null as File | null,
   })
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     post('/positions', {
       forceFormData: true,
@@ -112,7 +116,7 @@ export default function AddApplicationModal({ onClose }) {
                   <input
                     type="file"
                     accept=".pdf,.doc,.docx"
-                    onChange={e => setData('cv', e.target.files[0])}
+                    onChange={e => setData('cv', e.target.files?.[0] ?? null)}
                     className="hidden"
                   />
                 </label>
@@ -154,7 +158,14 @@ export default function AddApplicationModal({ onClose }) {
   )
 }
 
-function Field({ label, children, className = '', error }) {
+interface FieldProps {
+  label: string
+  children: React.ReactNode
+  className?: string
+  error?: string
+}
+
+function Field({ label, children, className = '', error }: FieldProps) {
   return (
     <div className={`flex flex-col gap-1.5 ${className}`}>
       <label className="text-text-primary text-sm font-medium">{label}</label>

@@ -1,12 +1,12 @@
-import { createInertiaApp } from '@inertiajs/react'
+import { createInertiaApp, type ResolvedComponent } from '@inertiajs/react'
 import { createRoot } from 'react-dom/client'
 
-const pages = {
-  'Dashboard/Index': () => require('./pages/Dashboard/Index.jsx'),
+const pages: Record<string, () => ResolvedComponent> = {
+  'Dashboard/Index': () => require('./pages/Dashboard/Index.tsx'),
 }
 
 createInertiaApp({
-  resolve: name => {
+  resolve: (name: string) => {
     const page = pages[name]
     if (!page) {
       throw new Error(`Unknown page: ${name}`)

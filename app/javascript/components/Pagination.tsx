@@ -1,10 +1,15 @@
 import React from 'react'
 import { router } from '@inertiajs/react'
+import type { Pagination as PaginationType } from '../types'
 
-export default function Pagination({ pagination }) {
+interface PaginationProps {
+  pagination: PaginationType
+}
+
+export default function Pagination({ pagination }: PaginationProps) {
   const { page, total, totalPages, perPage } = pagination
 
-  const goToPage = (p) => {
+  const goToPage = (p: number) => {
     if (p >= 1 && p <= totalPages) {
       router.get('/', { page: p }, { preserveState: true })
     }

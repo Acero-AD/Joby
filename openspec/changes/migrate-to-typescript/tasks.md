@@ -10,9 +10,9 @@
 
 ## 3. Rename & Type Components
 
-- [ ] 3.1 Rename `application.jsx` → `application.tsx` and add types
-- [ ] 3.2 Rename all component `.jsx` files to `.tsx` and add prop interfaces (Sidebar, Header, NavItem, StatCard, StatsRow, StatusBadge, Pagination, ApplicationsTable, InterviewItem, QuickActionButton, RightSidebar, AddApplicationModal)
-- [ ] 3.3 Rename `pages/Dashboard/Index.jsx` → `Index.tsx` and type the page props
+- [x] 3.1 Rename `application.jsx` → `application.tsx` and add types
+- [x] 3.2 Rename all component `.jsx` files to `.tsx` and add prop interfaces (Sidebar, Header, NavItem, StatCard, StatsRow, StatusBadge, Pagination, ApplicationsTable, InterviewItem, QuickActionButton, RightSidebar, AddApplicationModal)
+- [x] 3.3 Rename `pages/Dashboard/Index.jsx` → `Index.tsx` and type the page props
 
 ## 4. Stimulus Controllers
 

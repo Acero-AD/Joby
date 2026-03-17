@@ -2,9 +2,15 @@ import React from 'react'
 import { router } from '@inertiajs/react'
 import StatusBadge from './StatusBadge'
 import Pagination from './Pagination'
+import type { Position, Pagination as PaginationType } from '../types'
 
-export default function ApplicationsTable({ positions, pagination }) {
-  const handleDelete = (id) => {
+interface ApplicationsTableProps {
+  positions: Position[]
+  pagination: PaginationType
+}
+
+export default function ApplicationsTable({ positions, pagination }: ApplicationsTableProps) {
+  const handleDelete = (id: number) => {
     if (confirm('Are you sure you want to delete this application?')) {
       router.delete(`/positions/${id}`)
     }
