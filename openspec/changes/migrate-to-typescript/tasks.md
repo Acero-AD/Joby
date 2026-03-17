@@ -6,7 +6,7 @@
 
 ## 2. Shared Types
 
-- [ ] 2.1 Create `app/javascript/types.ts` with User, Position, Stats, Pagination, and DashboardProps interfaces
+- [x] 2.1 Create `app/javascript/types.ts` with User, Position, Stats, Pagination, and DashboardProps interfaces
 
 ## 3. Rename & Type Components
 
