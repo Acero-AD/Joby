@@ -32,10 +32,10 @@
 
 ## 5. Add Application Modal
 
-- [ ] 5.1 Build the modal overlay and form layout matching the Pencil design (520px wide)
-- [ ] 5.2 Add form fields: Job Title, Company, Status dropdown, URL, CV file upload, Notes
-- [ ] 5.3 Wire form submission to `PositionsController#create` via Inertia with validation errors
-- [ ] 5.4 Handle CV file upload via Active Storage
+- [x] 5.1 Build the modal overlay and form layout matching the Pencil design (520px wide)
+- [x] 5.2 Add form fields: Job Title, Company, Status dropdown, URL, CV file upload, Notes
+- [x] 5.3 Wire form submission to `PositionsController#create` via Inertia with validation errors
+- [x] 5.4 Handle CV file upload via Active Storage
 
 ## 6. Testing & Polish
 
