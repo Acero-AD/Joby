@@ -4,12 +4,10 @@ class PositionsControllerTest < ActionDispatch::IntegrationTest
   test "create adds a new position" do
     assert_difference "Position.count", 1 do
       post positions_path, params: {
-        position: {
-          title: "Rails Developer",
-          company: "Basecamp",
-          url: "https://basecamp.com/jobs/1",
-          status: "applied"
-        }
+        title: "Rails Developer",
+        company: "Basecamp",
+        url: "https://basecamp.com/jobs/1",
+        status: "applied"
       }
     end
     assert_redirected_to root_path
@@ -18,12 +16,10 @@ class PositionsControllerTest < ActionDispatch::IntegrationTest
   test "create with invalid data redirects back" do
     assert_no_difference "Position.count" do
       post positions_path, params: {
-        position: {
-          title: "Rails Developer",
-          company: "Basecamp",
-          url: "",
-          status: "applied"
-        }
+        title: "Rails Developer",
+        company: "Basecamp",
+        url: "",
+        status: "applied"
       }
     end
     assert_redirected_to root_path
@@ -40,7 +36,7 @@ class PositionsControllerTest < ActionDispatch::IntegrationTest
   test "update modifies a position" do
     position = positions(:rails_dev)
     patch position_path(position), params: {
-      position: { status: "applied" }
+      status: "applied"
     }
     assert_redirected_to root_path
     assert_equal "applied", position.reload.status

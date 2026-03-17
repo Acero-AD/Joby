@@ -32,6 +32,6 @@ class PositionsController < ApplicationController
   end
 
   def position_params
-    params.require(:position).permit(:title, :company, :url, :status, :cv)
+    params.permit(:title, :company, :url, :status, :cv)
   end
 end
