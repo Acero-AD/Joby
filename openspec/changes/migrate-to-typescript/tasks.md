@@ -20,5 +20,5 @@
 
 ## 5. Verify
 
-- [ ] 5.1 Run `bun run build` and confirm the build succeeds
-- [ ] 5.2 Run `bin/rails test` and confirm all tests pass
+- [x] 5.1 Run `bun run build` and confirm the build succeeds
+- [x] 5.2 Run `bin/rails test` and confirm all tests pass
