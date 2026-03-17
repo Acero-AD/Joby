@@ -24,11 +24,11 @@
 
 ## 4. Applications Table
 
-- [ ] 4.1 Build the table component with header row (Job Title, Company/Link, CV Used, Status, Actions)
-- [ ] 4.2 Build table data rows with status badge color mapping and "View" link for job URL
-- [ ] 4.3 Add pagination component (page numbers, prev/next buttons, showing X of Y count)
-- [ ] 4.4 Add delete action (destroy position via Inertia visit, refresh table)
-- [ ] 4.5 Add filter button UI (placeholder functionality)
+- [x] 4.1 Build the table component with header row (Job Title, Company/Link, CV Used, Status, Actions)
+- [x] 4.2 Build table data rows with status badge color mapping and "View" link for job URL
+- [x] 4.3 Add pagination component (page numbers, prev/next buttons, showing X of Y count)
+- [x] 4.4 Add delete action (destroy position via Inertia visit, refresh table)
+- [x] 4.5 Add filter button UI (placeholder functionality)
 
 ## 5. Add Application Modal
 
