@@ -15,12 +15,12 @@
 
 ## 3. Reusable Components
 
-- [ ] 3.1 Create StatCard component (label, value, icon badge, trend indicator with color variants)
-- [ ] 3.2 Create NavItem component (default + active variants with icon and label)
-- [ ] 3.3 Create InterviewItem component (dark card with company, time, type icon, status dot)
-- [ ] 3.4 Create QuickActionButton component (icon + label in bordered card)
-- [ ] 3.5 Build the Stats Row section using 4 StatCard instances with computed data from props
-- [ ] 3.6 Build the Right Sidebar with Upcoming Interviews card and Quick Actions card
+- [x] 3.1 Create StatCard component (label, value, icon badge, trend indicator with color variants)
+- [x] 3.2 Create NavItem component (default + active variants with icon and label)
+- [x] 3.3 Create InterviewItem component (dark card with company, time, type icon, status dot)
+- [x] 3.4 Create QuickActionButton component (icon + label in bordered card)
+- [x] 3.5 Build the Stats Row section using 4 StatCard instances with computed data from props
+- [x] 3.6 Build the Right Sidebar with Upcoming Interviews card and Quick Actions card
 
 ## 4. Applications Table
 
