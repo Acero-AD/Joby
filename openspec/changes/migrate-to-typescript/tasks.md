@@ -16,7 +16,7 @@
 
 ## 4. Stimulus Controllers
 
-- [ ] 4.1 Rename Stimulus `.js` controllers to `.ts`
+- [x] 4.1 Rename Stimulus `.js` controllers to `.ts`
 
 ## 5. Verify
 
