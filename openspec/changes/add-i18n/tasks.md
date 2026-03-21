@@ -41,7 +41,7 @@
 
 ## 9. Migrate Components — Right Sidebar
 
-- [ ] 9.1 Update `RightSidebar.tsx` to use translated "Upcoming Interviews", "View all", "Quick Actions", and quick action button labels
+- [x] 9.1 Update `RightSidebar.tsx` to use translated "Upcoming Interviews", "View all", "Quick Actions", and quick action button labels
 
 ## 10. Testing
 
