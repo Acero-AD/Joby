@@ -20,4 +20,4 @@
 
 ## 5. Testing
 
-- [ ] 5.1 Run the test suite and verify everything passes
+- [x] 5.1 Run the test suite and verify everything passes

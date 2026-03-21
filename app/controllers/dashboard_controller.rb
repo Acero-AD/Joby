@@ -17,8 +17,8 @@ class DashboardController < ApplicationController
     }
 
     render inertia: "Dashboard/Index", props: {
-      user: user ? { id: user.id, name: user.name, email: user.email } : nil,
-      positions: paginated.map { |p| serialize_position(p) },
+      user: user ? UserSerializer.new(user).as_json : nil,
+      positions: paginated.map { |p| PositionSerializer.new(p).as_json },
       stats: stats,
       pagination: {
         page: page,
@@ -29,18 +29,4 @@ class DashboardController < ApplicationController
     }
   end
 
-  private
-
-  def serialize_position(position)
-    {
-      id: position.id,
-      url: position.url,
-      status: position.status,
-      title: position.title,
-      company: position.company,
-      cvFilename: position.cv.attached? ? position.cv.filename.to_s : nil,
-      createdAt: position.created_at.strftime("%b %-d, %Y"),
-      updatedAt: position.updated_at.strftime("%b %-d, %Y")
-    }
-  end
 end

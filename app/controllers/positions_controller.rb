@@ -3,8 +3,8 @@ class PositionsController < ApplicationController
 
   def show
     render inertia: "Positions/Show", props: {
-      user: @position.user ? { id: @position.user.id, name: @position.user.name, email: @position.user.email } : nil,
-      position: serialize_position(@position)
+      user: @position.user ? UserSerializer.new(@position.user).as_json : nil,
+      position: PositionSerializer.new(@position).as_json
     }
   end
 
@@ -42,16 +42,4 @@ class PositionsController < ApplicationController
     params.permit(:title, :company, :url, :status, :cv)
   end
 
-  def serialize_position(position)
-    {
-      id: position.id,
-      url: position.url,
-      status: position.status,
-      title: position.title,
-      company: position.company,
-      cvFilename: position.cv.attached? ? position.cv.filename.to_s : nil,
-      createdAt: position.created_at.strftime("%b %-d, %Y"),
-      updatedAt: position.updated_at.strftime("%b %-d, %Y")
-    }
-  end
 end
