@@ -1,0 +1,104 @@
+{
+  "sidebar": {
+    "menu": "MENU",
+    "nav": {
+      "dashboard": "Dashboard",
+      "applications": "Applications",
+      "documents": "Documents",
+      "calendar": "Calendar",
+      "settings": "Settings"
+    },
+    "role": "Job Seeker"
+  },
+  "header": {
+    "welcome": "Welcome back, {{name}}!",
+    "subtitle": "Track and manage your job applications",
+    "search": "Search applications...",
+    "addApplication": "Add Application"
+  },
+  "stats": {
+    "totalApplications": "Total Applications",
+    "interviews": "Interviews",
+    "offers": "Offers",
+    "rejections": "Rejections",
+    "total": "{{count}} total",
+    "scheduled": "Scheduled",
+    "pendingDecisions": "Pending decisions",
+    "thisMonth": "This month"
+  },
+  "table": {
+    "title": "Recent Applications",
+    "filter": "Filter",
+    "headers": {
+      "jobTitle": "Job Title",
+      "companyLink": "Company / Link",
+      "cvUsed": "CV Used",
+      "status": "Status",
+      "actions": "Actions"
+    },
+    "emptyState": "No applications yet. Click \"Add Application\" to get started.",
+    "appliedDate": "Applied {{date}}",
+    "viewLink": "View",
+    "noCv": "No CV",
+    "untitled": "Untitled"
+  },
+  "pagination": {
+    "showing": "Showing {{count}} of {{total}} applications"
+  },
+  "status": {
+    "bookmarked": "Bookmarked",
+    "applied": "Applied",
+    "interviewing": "Interview",
+    "offered": "Offer",
+    "rejected": "Rejected",
+    "withdrawn": "Withdrawn",
+    "accepted": "Accepted"
+  },
+  "modal": {
+    "title": "Add New Application",
+    "subtitle": "Track a new job opportunity",
+    "fields": {
+      "jobTitle": "Job Title",
+      "jobTitlePlaceholder": "e.g. Senior Frontend Developer",
+      "company": "Company",
+      "companyPlaceholder": "e.g. Google",
+      "status": "Status",
+      "jobPostingLink": "Job Posting Link",
+      "urlPlaceholder": "https://...",
+      "cvResume": "CV / Resume",
+      "chooseFile": "Choose file",
+      "fileHint": "PDF, DOC up to 10MB"
+    },
+    "footer": {
+      "editLater": "All fields can be edited later",
+      "cancel": "Cancel",
+      "save": "Save Application"
+    }
+  },
+  "detail": {
+    "backToApplications": "Back to Applications",
+    "edit": "Edit",
+    "delete": "Delete",
+    "applicationDetails": "Application Details",
+    "labels": {
+      "applicationUrl": "Application URL",
+      "status": "Status",
+      "cvFile": "CV File",
+      "created": "Created",
+      "lastUpdated": "Last Updated"
+    },
+    "noUrl": "No URL",
+    "noCvAttached": "No CV attached",
+    "confirmDelete": "Are you sure you want to delete this application?"
+  },
+  "rightSidebar": {
+    "upcomingInterviews": "Upcoming Interviews",
+    "viewAll": "View all",
+    "quickActions": "Quick Actions",
+    "actions": {
+      "uploadCv": "Upload New CV",
+      "savedJobs": "Saved Jobs",
+      "analytics": "Analytics"
+    }
+  }
+}

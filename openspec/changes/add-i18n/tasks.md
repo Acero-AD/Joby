@@ -6,8 +6,8 @@
 
 ## 2. Translation Files
 
-- [ ] 2.1 Create `app/javascript/locales/en.json` with all English strings organized by UI area (sidebar, header, stats, table, modal, detail, common)
-- [ ] 2.2 Create `app/javascript/locales/es.json` with all Spanish translations matching the same key structure
+- [x] 2.1 Create `app/javascript/locales/en.json` with all English strings organized by UI area (sidebar, header, stats, table, modal, detail, common)
+- [x] 2.2 Create `app/javascript/locales/es.json` with all Spanish translations matching the same key structure
 
 ## 3. Language Switcher
 

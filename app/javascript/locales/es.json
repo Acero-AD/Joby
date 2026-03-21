@@ -1,0 +1,104 @@
+{
+  "sidebar": {
+    "menu": "MENÚ",
+    "nav": {
+      "dashboard": "Panel",
+      "applications": "Solicitudes",
+      "documents": "Documentos",
+      "calendar": "Calendario",
+      "settings": "Ajustes"
+    },
+    "role": "Buscador de empleo"
+  },
+  "header": {
+    "welcome": "¡Bienvenido, {{name}}!",
+    "subtitle": "Gestiona y sigue tus solicitudes de empleo",
+    "search": "Buscar solicitudes...",
+    "addApplication": "Añadir solicitud"
+  },
+  "stats": {
+    "totalApplications": "Total de solicitudes",
+    "interviews": "Entrevistas",
+    "offers": "Ofertas",
+    "rejections": "Rechazos",
+    "total": "{{count}} en total",
+    "scheduled": "Programadas",
+    "pendingDecisions": "Decisiones pendientes",
+    "thisMonth": "Este mes"
+  },
+  "table": {
+    "title": "Solicitudes recientes",
+    "filter": "Filtrar",
+    "headers": {
+      "jobTitle": "Puesto",
+      "companyLink": "Empresa / Enlace",
+      "cvUsed": "CV utilizado",
+      "status": "Estado",
+      "actions": "Acciones"
+    },
+    "emptyState": "Aún no hay solicitudes. Haz clic en \"Añadir solicitud\" para empezar.",
+    "appliedDate": "Aplicado {{date}}",
+    "viewLink": "Ver",
+    "noCv": "Sin CV",
+    "untitled": "Sin título"
+  },
+  "pagination": {
+    "showing": "Mostrando {{count}} de {{total}} solicitudes"
+  },
+  "status": {
+    "bookmarked": "Guardado",
+    "applied": "Aplicado",
+    "interviewing": "Entrevista",
+    "offered": "Oferta",
+    "rejected": "Rechazado",
+    "withdrawn": "Retirado",
+    "accepted": "Aceptado"
+  },
+  "modal": {
+    "title": "Nueva solicitud",
+    "subtitle": "Registra una nueva oportunidad de empleo",
+    "fields": {
+      "jobTitle": "Puesto",
+      "jobTitlePlaceholder": "ej. Desarrollador Frontend Senior",
+      "company": "Empresa",
+      "companyPlaceholder": "ej. Google",
+      "status": "Estado",
+      "jobPostingLink": "Enlace de la oferta",
+      "urlPlaceholder": "https://...",
+      "cvResume": "CV / Currículum",
+      "chooseFile": "Elegir archivo",
+      "fileHint": "PDF, DOC hasta 10MB"
+    },
+    "footer": {
+      "editLater": "Todos los campos se pueden editar después",
+      "cancel": "Cancelar",
+      "save": "Guardar solicitud"
+    }
+  },
+  "detail": {
+    "backToApplications": "Volver a solicitudes",
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "applicationDetails": "Detalles de la solicitud",
+    "labels": {
+      "applicationUrl": "URL de la solicitud",
+      "status": "Estado",
+      "cvFile": "Archivo CV",
+      "created": "Creado",
+      "lastUpdated": "Última actualización"
+    },
+    "noUrl": "Sin URL",
+    "noCvAttached": "Sin CV adjunto",
+    "confirmDelete": "¿Estás seguro de que quieres eliminar esta solicitud?"
+  },
+  "rightSidebar": {
+    "upcomingInterviews": "Próximas entrevistas",
+    "viewAll": "Ver todo",
+    "quickActions": "Acciones rápidas",
+    "actions": {
+      "uploadCv": "Subir nuevo CV",
+      "savedJobs": "Empleos guardados",
+      "analytics": "Estadísticas"
+    }
+  }
+}
