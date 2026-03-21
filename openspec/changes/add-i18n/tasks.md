@@ -21,9 +21,9 @@
 
 ## 5. Migrate Components — Header & Stats
 
-- [ ] 5.1 Update `Header.tsx` to use translated welcome message, subtitle, search placeholder, and "Add Application" button
-- [ ] 5.2 Update `StatsRow.tsx` to use translated stat card labels and descriptions
-- [ ] 5.3 Update `StatCard.tsx` if it renders any hardcoded text
+- [x] 5.1 Update `Header.tsx` to use translated welcome message, subtitle, search placeholder, and "Add Application" button
+- [x] 5.2 Update `StatsRow.tsx` to use translated stat card labels and descriptions
+- [x] 5.3 Update `StatCard.tsx` if it renders any hardcoded text
 
 ## 6. Migrate Components — Table & Pagination
 
