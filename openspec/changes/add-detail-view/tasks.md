@@ -16,7 +16,7 @@
 
 ## 4. Dashboard Navigation
 
-- [ ] 4.1 Make `ApplicationsTable` rows clickable to navigate to `/positions/:id` via Inertia (excluding action buttons and external links)
+- [x] 4.1 Make `ApplicationsTable` rows clickable to navigate to `/positions/:id` via Inertia (excluding action buttons and external links)
 
 ## 5. Testing
 

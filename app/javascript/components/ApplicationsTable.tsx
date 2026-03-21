@@ -46,7 +46,15 @@ export default function ApplicationsTable({ positions, pagination }: Application
           </div>
         ) : (
           positions.map((pos, i) => (
-            <div key={pos.id} className={`flex items-center py-4 px-6 ${i < positions.length - 1 ? 'border-b border-border-light' : ''}`}>
+            <div
+              key={pos.id}
+              className={`flex items-center py-4 px-6 cursor-pointer hover:bg-gray-50 ${i < positions.length - 1 ? 'border-b border-border-light' : ''}`}
+              onClick={(e) => {
+                const target = e.target as HTMLElement
+                if (target.closest('a') || target.closest('button')) return
+                router.visit(`/positions/${pos.id}`)
+              }}
+            >
               {/* Job Title */}
               <div className="w-[240px] flex flex-col gap-0.5">
                 <span className="text-text-primary text-sm font-medium">{pos.title || 'Untitled'}</span>
