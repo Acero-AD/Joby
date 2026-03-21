@@ -11,13 +11,13 @@
 
 ## 3. Language Switcher
 
-- [ ] 3.1 Create `app/javascript/components/LanguageSwitcher.tsx` with EN/ES toggle
-- [ ] 3.2 Add the LanguageSwitcher to `Sidebar.tsx` above the user profile section
+- [x] 3.1 Create `app/javascript/components/LanguageSwitcher.tsx` with EN/ES toggle
+- [x] 3.2 Add the LanguageSwitcher to `Sidebar.tsx` above the user profile section
 
 ## 4. Migrate Components — Sidebar & Navigation
 
-- [ ] 4.1 Update `Sidebar.tsx` to use `useTranslation()` for navigation labels, "MENU" label, and "Job Seeker" text
-- [ ] 4.2 Update `NavItem.tsx` if labels are passed as translation keys
+- [x] 4.1 Update `Sidebar.tsx` to use `useTranslation()` for navigation labels, "MENU" label, and "Job Seeker" text
+- [x] 4.2 Update `NavItem.tsx` if labels are passed as translation keys
 
 ## 5. Migrate Components — Header & Stats
 
