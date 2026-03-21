@@ -37,7 +37,7 @@
 
 ## 8. Migrate Components — Detail View
 
-- [ ] 8.1 Update `Positions/Show.tsx` to use translated "Back to Applications", "Edit", "Delete", field labels, "No URL", "No CV attached", "Application Details", and confirmation dialog text
+- [x] 8.1 Update `Positions/Show.tsx` to use translated "Back to Applications", "Edit", "Delete", field labels, "No URL", "No CV attached", "Application Details", and confirmation dialog text
 
 ## 9. Migrate Components — Right Sidebar
 

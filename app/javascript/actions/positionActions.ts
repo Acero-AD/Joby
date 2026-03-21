@@ -1,4 +1,5 @@
 import { router } from '@inertiajs/react'
+import i18n from '../i18n'
 
 export function navigateToPosition(id: number) {
   router.visit(`/positions/${id}`)
@@ -9,7 +10,7 @@ export function navigateToDashboard() {
 }
 
 export function deletePosition(id: number) {
-  if (confirm('Are you sure you want to delete this application?')) {
+  if (confirm(i18n.t('detail.confirmDelete'))) {
     router.delete(`/positions/${id}`, {
       onSuccess: () => navigateToDashboard()
     })
