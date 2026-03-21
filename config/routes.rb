@@ -10,5 +10,5 @@ Rails.application.routes.draw do
   # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
 
   root "dashboard#index"
-  resources :positions, only: [:create, :update, :destroy]
+  resources :positions, only: [:show, :create, :update, :destroy]
 end

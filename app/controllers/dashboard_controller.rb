@@ -39,7 +39,8 @@ class DashboardController < ApplicationController
       title: position.title,
       company: position.company,
       cvFilename: position.cv.attached? ? position.cv.filename.to_s : nil,
-      createdAt: position.created_at.strftime("%b %-d, %Y")
+      createdAt: position.created_at.strftime("%b %-d, %Y"),
+      updatedAt: position.updated_at.strftime("%b %-d, %Y")
     }
   end
 end
