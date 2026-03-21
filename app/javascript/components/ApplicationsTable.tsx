@@ -1,7 +1,7 @@
 import React from 'react'
-import { router } from '@inertiajs/react'
 import StatusBadge from './StatusBadge'
 import Pagination from './Pagination'
+import { deletePosition, handleRowClick } from '../actions/positionActions'
 import type { Position, Pagination as PaginationType } from '../types'
 
 interface ApplicationsTableProps {
@@ -10,11 +10,6 @@ interface ApplicationsTableProps {
 }
 
 export default function ApplicationsTable({ positions, pagination }: ApplicationsTableProps) {
-  const handleDelete = (id: number) => {
-    if (confirm('Are you sure you want to delete this application?')) {
-      router.delete(`/positions/${id}`)
-    }
-  }
 
   return (
     <div className="flex-1 bg-white rounded-[14px] shadow-[0_2px_12px_#A855F712] flex flex-col overflow-hidden">
@@ -49,11 +44,7 @@ export default function ApplicationsTable({ positions, pagination }: Application
             <div
               key={pos.id}
               className={`flex items-center py-4 px-6 cursor-pointer hover:bg-gray-50 ${i < positions.length - 1 ? 'border-b border-border-light' : ''}`}
-              onClick={(e) => {
-                const target = e.target as HTMLElement
-                if (target.closest('a') || target.closest('button')) return
-                router.visit(`/positions/${pos.id}`)
-              }}
+              onClick={(e) => handleRowClick(e, pos.id)}
             >
               {/* Job Title */}
               <div className="w-[240px] flex flex-col gap-0.5">
@@ -103,7 +94,7 @@ export default function ApplicationsTable({ positions, pagination }: Application
                     <path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z" />
                   </svg>
                 </button>
-                <button onClick={() => handleDelete(pos.id)} className="cursor-pointer hover:opacity-70">
+                <button onClick={() => deletePosition(pos.id)} className="cursor-pointer hover:opacity-70">
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="#D4D4D8" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
                     <path d="M3 6h18" /><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" /><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" />
                   </svg>

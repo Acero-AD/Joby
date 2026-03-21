@@ -1,5 +1,5 @@
 class PositionsController < ApplicationController
-  before_action :set_position, only: [:show, :update, :destroy]
+  before_action :set_position, only: [ :show, :update, :destroy ]
 
   def show
     render inertia: "Positions/Show", props: {
@@ -41,5 +41,4 @@ class PositionsController < ApplicationController
   def position_params
     params.permit(:title, :company, :url, :status, :cv)
   end
-
 end

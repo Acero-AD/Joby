@@ -1,7 +1,7 @@
 import React from 'react'
-import { router } from '@inertiajs/react'
 import Sidebar from '../../components/Sidebar'
 import StatusBadge from '../../components/StatusBadge'
+import { deletePosition, navigateToDashboard } from '../../actions/positionActions'
 import type { Position, User } from '../../types'
 
 interface ShowProps {
@@ -10,13 +10,6 @@ interface ShowProps {
 }
 
 export default function PositionShow({ user, position }: ShowProps) {
-  const handleDelete = () => {
-    if (confirm('Are you sure you want to delete this application?')) {
-      router.delete(`/positions/${position.id}`, {
-        onSuccess: () => router.visit('/')
-      })
-    }
-  }
 
   return (
     <div className="flex w-[1440px] h-[900px] mx-auto rounded-[20px] bg-gradient-to-br from-bg-start via-bg-mid1 via-70% to-bg-end">
@@ -27,7 +20,7 @@ export default function PositionShow({ user, position }: ShowProps) {
         <div className="flex flex-col gap-4">
           <a
             href="/"
-            onClick={(e) => { e.preventDefault(); router.visit('/') }}
+            onClick={(e) => { e.preventDefault(); navigateToDashboard() }}
             className="flex items-center gap-1.5 text-text-muted text-[13px] font-medium hover:text-text-secondary"
           >
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
@@ -50,7 +43,7 @@ export default function PositionShow({ user, position }: ShowProps) {
                 <span className="text-[#A855F7] text-sm font-medium">Edit</span>
               </button>
               <button
-                onClick={handleDelete}
+                onClick={() => deletePosition(position.id)}
                 className="flex items-center gap-1.5 rounded-[10px] border border-[#EF4444] py-2 px-4 cursor-pointer hover:bg-red-50"
               >
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="#EF4444" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
