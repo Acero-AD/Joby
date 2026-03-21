@@ -1,21 +1,17 @@
 import React from 'react'
 import { useForm } from '@inertiajs/react'
+import { useTranslation } from 'react-i18next'
 
 interface AddApplicationModalProps {
   onClose: () => void
 }
 
-const statuses = [
-  { value: 'bookmarked', label: 'Bookmarked' },
-  { value: 'applied', label: 'Applied' },
-  { value: 'interviewing', label: 'Interviewing' },
-  { value: 'offered', label: 'Offered' },
-  { value: 'rejected', label: 'Rejected' },
-  { value: 'withdrawn', label: 'Withdrawn' },
-  { value: 'accepted', label: 'Accepted' },
+const statusKeys = [
+  'bookmarked', 'applied', 'interviewing', 'offered', 'rejected', 'withdrawn', 'accepted',
 ]
 
 export default function AddApplicationModal({ onClose }: AddApplicationModalProps) {
+  const { t } = useTranslation()
   const { data, setData, post, processing, errors } = useForm({
     title: '',
     company: '',
@@ -41,8 +37,8 @@ export default function AddApplicationModal({ onClose }: AddApplicationModalProp
         {/* Header */}
         <div className="flex items-center justify-between py-6 px-7 pb-5">
           <div className="flex flex-col gap-1">
-            <h2 className="text-text-primary text-lg font-semibold">Add New Application</h2>
-            <p className="text-text-light text-xs">Track a new job opportunity</p>
+            <h2 className="text-text-primary text-lg font-semibold">{t('modal.title')}</h2>
+            <p className="text-text-light text-xs">{t('modal.subtitle')}</p>
           </div>
           <button
             onClick={onClose}
@@ -59,60 +55,60 @@ export default function AddApplicationModal({ onClose }: AddApplicationModalProp
         {/* Form */}
         <form onSubmit={handleSubmit} className="flex flex-col gap-5 py-5 px-7">
           {/* Job Title */}
-          <Field label="Job Title" error={errors.title}>
+          <Field label={t('modal.fields.jobTitle')} error={errors.title}>
             <input
               type="text"
               value={data.title}
               onChange={e => setData('title', e.target.value)}
-              placeholder="e.g. Senior Frontend Developer"
+              placeholder={t('modal.fields.jobTitlePlaceholder')}
               className="w-full rounded-[10px] border border-border-light py-2.5 px-3.5 text-sm text-text-primary placeholder:text-text-light outline-none focus:border-primary-purple"
             />
           </Field>
 
           {/* Company + Status row */}
           <div className="flex gap-4">
-            <Field label="Company" className="flex-1" error={errors.company}>
+            <Field label={t('modal.fields.company')} className="flex-1" error={errors.company}>
               <input
                 type="text"
                 value={data.company}
                 onChange={e => setData('company', e.target.value)}
-                placeholder="e.g. Google"
+                placeholder={t('modal.fields.companyPlaceholder')}
                 className="w-full rounded-[10px] border border-border-light py-2.5 px-3.5 text-sm text-text-primary placeholder:text-text-light outline-none focus:border-primary-purple"
               />
             </Field>
-            <Field label="Status" className="flex-1" error={errors.status}>
+            <Field label={t('modal.fields.status')} className="flex-1" error={errors.status}>
               <select
                 value={data.status}
                 onChange={e => setData('status', e.target.value)}
                 className="w-full rounded-[10px] border border-border-light py-2.5 px-3.5 text-sm text-text-primary outline-none focus:border-primary-purple bg-white"
               >
-                {statuses.map(s => (
-                  <option key={s.value} value={s.value}>{s.label}</option>
+                {statusKeys.map(key => (
+                  <option key={key} value={key}>{t(`status.${key}`)}</option>
                 ))}
               </select>
             </Field>
           </div>
 
           {/* URL */}
-          <Field label="Job Posting Link" error={errors.url}>
+          <Field label={t('modal.fields.jobPostingLink')} error={errors.url}>
             <input
               type="url"
               value={data.url}
               onChange={e => setData('url', e.target.value)}
-              placeholder="https://..."
+              placeholder={t('modal.fields.urlPlaceholder')}
               className="w-full rounded-[10px] border border-border-light py-2.5 px-3.5 text-sm text-text-primary placeholder:text-text-light outline-none focus:border-primary-purple"
             />
           </Field>
 
           {/* CV Upload */}
-          <Field label="CV / Resume" error={errors.cv}>
+          <Field label={t('modal.fields.cvResume')} error={errors.cv}>
             <div className="flex items-center gap-3 rounded-[10px] border border-dashed border-border-purple py-3 px-4 bg-[#FAF5FF]">
               <svg className="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="#A855F7" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="17 8 12 3 7 8" /><line x1="12" x2="12" y1="3" y2="15" />
               </svg>
               <div className="flex-1">
                 <label className="text-primary-purple text-sm font-medium cursor-pointer hover:underline">
-                  {data.cv ? data.cv.name : 'Choose file'}
+                  {data.cv ? data.cv.name : t('modal.fields.chooseFile')}
                   <input
                     type="file"
                     accept=".pdf,.doc,.docx"
@@ -120,7 +116,7 @@ export default function AddApplicationModal({ onClose }: AddApplicationModalProp
                     className="hidden"
                   />
                 </label>
-                <p className="text-text-light text-xs mt-0.5">PDF, DOC up to 10MB</p>
+                <p className="text-text-light text-xs mt-0.5">{t('modal.fields.fileHint')}</p>
               </div>
             </div>
           </Field>
@@ -134,7 +130,7 @@ export default function AddApplicationModal({ onClose }: AddApplicationModalProp
             <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="#9CA3AF" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
               <circle cx="12" cy="12" r="10" /><path d="M12 16v-4" /><path d="M12 8h.01" />
             </svg>
-            <span className="text-text-light text-xs">All fields can be edited later</span>
+            <span className="text-text-light text-xs">{t('modal.footer.editLater')}</span>
           </div>
           <div className="flex items-center gap-3">
             <button
@@ -142,14 +138,14 @@ export default function AddApplicationModal({ onClose }: AddApplicationModalProp
               onClick={onClose}
               className="rounded-[10px] border border-border-medium py-2.5 px-5 text-sm font-medium text-text-secondary cursor-pointer hover:bg-gray-50"
             >
-              Cancel
+              {t('modal.footer.cancel')}
             </button>
             <button
               onClick={handleSubmit}
               disabled={processing}
               className="rounded-[10px] bg-gradient-to-b from-primary-purple to-primary-pink py-2.5 px-5 text-sm font-medium text-white cursor-pointer disabled:opacity-60"
             >
-              Save Application
+              {t('modal.footer.save')}
             </button>
           </div>
         </div>

@@ -33,7 +33,7 @@
 
 ## 7. Migrate Components — Modal
 
-- [ ] 7.1 Update `AddApplicationModal.tsx` to use translated header, field labels, placeholders, status options, file upload text, and button labels
+- [x] 7.1 Update `AddApplicationModal.tsx` to use translated header, field labels, placeholders, status options, file upload text, and button labels
 
 ## 8. Migrate Components — Detail View
 
