@@ -1,4 +1,5 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import StatusBadge from './StatusBadge'
 import Pagination from './Pagination'
 import { deletePosition, handleRowClick } from '../actions/positionActions'
@@ -10,34 +11,35 @@ interface ApplicationsTableProps {
 }
 
 export default function ApplicationsTable({ positions, pagination }: ApplicationsTableProps) {
+  const { t } = useTranslation()
 
   return (
     <div className="flex-1 bg-white rounded-[14px] shadow-[0_2px_12px_#A855F712] flex flex-col overflow-hidden">
       {/* Table Header */}
       <div className="flex items-center justify-between border-b border-border-light py-4 px-6">
-        <span className="text-text-primary text-[17px] font-semibold">Recent Applications</span>
+        <span className="text-text-primary text-[17px] font-semibold">{t('table.title')}</span>
         <button className="flex items-center gap-1.5 rounded-lg border border-border-medium py-[7px] px-3 cursor-pointer hover:bg-gray-50">
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="#6B7280" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
             <line x1="21" x2="14" y1="4" y2="4" /><line x1="10" x2="3" y1="4" y2="4" /><line x1="21" x2="12" y1="12" y2="12" /><line x1="8" x2="3" y1="12" y2="12" /><line x1="21" x2="16" y1="20" y2="20" /><line x1="12" x2="3" y1="20" y2="20" /><line x1="14" x2="14" y1="2" y2="6" /><line x1="8" x2="8" y1="10" y2="14" /><line x1="16" x2="16" y1="18" y2="22" />
           </svg>
-          <span className="text-text-secondary text-[13px] font-medium">Filter</span>
+          <span className="text-text-secondary text-[13px] font-medium">{t('table.filter')}</span>
         </button>
       </div>
 
       {/* Column Headers */}
       <div className="flex items-center bg-surface-light border-b border-border-light py-2.5 px-6">
-        <div className="w-[240px]"><span className="text-text-muted text-xs font-semibold">Job Title</span></div>
-        <div className="flex-1"><span className="text-text-muted text-xs font-semibold">Company / Link</span></div>
-        <div className="w-[160px]"><span className="text-text-muted text-xs font-semibold">CV Used</span></div>
-        <div className="w-[120px]"><span className="text-text-muted text-xs font-semibold">Status</span></div>
-        <div className="w-[80px]"><span className="text-text-muted text-xs font-semibold">Actions</span></div>
+        <div className="w-[240px]"><span className="text-text-muted text-xs font-semibold">{t('table.headers.jobTitle')}</span></div>
+        <div className="flex-1"><span className="text-text-muted text-xs font-semibold">{t('table.headers.companyLink')}</span></div>
+        <div className="w-[160px]"><span className="text-text-muted text-xs font-semibold">{t('table.headers.cvUsed')}</span></div>
+        <div className="w-[120px]"><span className="text-text-muted text-xs font-semibold">{t('table.headers.status')}</span></div>
+        <div className="w-[80px]"><span className="text-text-muted text-xs font-semibold">{t('table.headers.actions')}</span></div>
       </div>
 
       {/* Data Rows */}
       <div className="flex-1 flex flex-col">
         {positions.length === 0 ? (
           <div className="flex-1 flex items-center justify-center text-text-muted text-sm py-12">
-            No applications yet. Click "Add Application" to get started.
+            {t('table.emptyState')}
           </div>
         ) : (
           positions.map((pos, i) => (
@@ -48,8 +50,8 @@ export default function ApplicationsTable({ positions, pagination }: Application
             >
               {/* Job Title */}
               <div className="w-[240px] flex flex-col gap-0.5">
-                <span className="text-text-primary text-sm font-medium">{pos.title || 'Untitled'}</span>
-                <span className="text-text-light text-xs">Applied {pos.createdAt}</span>
+                <span className="text-text-primary text-sm font-medium">{pos.title || t('table.untitled')}</span>
+                <span className="text-text-light text-xs">{t('table.appliedDate', { date: pos.createdAt })}</span>
               </div>
 
               {/* Company / Link */}
@@ -64,7 +66,7 @@ export default function ApplicationsTable({ positions, pagination }: Application
                   <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="#A855F7" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
                     <path d="M15 3h6v6" /><path d="M10 14 21 3" /><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
                   </svg>
-                  <span className="text-[#7C3AED] text-[11px] font-medium">View</span>
+                  <span className="text-[#7C3AED] text-[11px] font-medium">{t('table.viewLink')}</span>
                 </a>
               </div>
 
@@ -78,7 +80,7 @@ export default function ApplicationsTable({ positions, pagination }: Application
                     <span className="text-text-secondary text-xs truncate">{pos.cvFilename}</span>
                   </>
                 ) : (
-                  <span className="text-text-light text-xs">No CV</span>
+                  <span className="text-text-light text-xs">{t('table.noCv')}</span>
                 )}
               </div>
 

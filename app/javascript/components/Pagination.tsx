@@ -1,4 +1,5 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import { router } from '@inertiajs/react'
 import type { Pagination as PaginationType } from '../types'
 
@@ -7,6 +8,7 @@ interface PaginationProps {
 }
 
 export default function Pagination({ pagination }: PaginationProps) {
+  const { t } = useTranslation()
   const { page, total, totalPages, perPage } = pagination
 
   const goToPage = (p: number) => {
@@ -15,12 +17,10 @@ export default function Pagination({ pagination }: PaginationProps) {
     }
   }
 
-  const showingEnd = Math.min(page * perPage, total)
-
   return (
     <div className="flex items-center justify-between border-t border-border-light py-3.5 px-6">
       <span className="text-text-muted text-[13px]">
-        Showing {Math.min(perPage, total)} of {total} applications
+        {t('pagination.showing', { count: Math.min(perPage, total), total })}
       </span>
 
       <div className="flex items-center gap-1">

@@ -27,9 +27,9 @@
 
 ## 6. Migrate Components — Table & Pagination
 
-- [ ] 6.1 Update `ApplicationsTable.tsx` to use translated column headers, "Recent Applications" title, "Filter" button, empty state, "Applied" prefix, "View" link, and "No CV" text
-- [ ] 6.2 Update `StatusBadge.tsx` to use translated status labels
-- [ ] 6.3 Update `Pagination.tsx` to use translated "Showing X of Y applications" text
+- [x] 6.1 Update `ApplicationsTable.tsx` to use translated column headers, "Recent Applications" title, "Filter" button, empty state, "Applied" prefix, "View" link, and "No CV" text
+- [x] 6.2 Update `StatusBadge.tsx` to use translated status labels
+- [x] 6.3 Update `Pagination.tsx` to use translated "Showing X of Y applications" text
 
 ## 7. Migrate Components — Modal
 
