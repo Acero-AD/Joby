@@ -12,6 +12,7 @@ export interface Position {
   company: string
   cvFilename: string | null
   createdAt: string
+  updatedAt: string
 }
 
 export interface Stats {

@@ -6,8 +6,8 @@
 
 ## 2. Frontend Types & Setup
 
-- [ ] 2.1 Add `updatedAt` to `Position` interface in `types.ts`
-- [ ] 2.2 Add `Positions/Show` page mapping in `application.tsx`
+- [x] 2.1 Add `updatedAt` to `Position` interface in `types.ts`
+- [x] 2.2 Add `Positions/Show` page mapping in `application.tsx`
 
 ## 3. Detail View Page
 

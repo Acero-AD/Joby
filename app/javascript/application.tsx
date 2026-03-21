@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 
 const pages: Record<string, () => ResolvedComponent> = {
   'Dashboard/Index': () => require('./pages/Dashboard/Index.tsx'),
+  'Positions/Show': () => require('./pages/Positions/Show.tsx'),
 }
 
 createInertiaApp({
