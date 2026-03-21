@@ -45,4 +45,4 @@
 
 ## 10. Testing
 
-- [ ] 10.1 Run the test suite and verify everything passes
+- [x] 10.1 Run the test suite and verify everything passes
