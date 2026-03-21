@@ -4,11 +4,12 @@ import type { User } from '../types'
 
 interface SidebarProps {
   user: User | null
+  activePage?: string
 }
 
-export default function Sidebar({ user }: SidebarProps) {
+export default function Sidebar({ user, activePage = 'Dashboard' }: SidebarProps) {
   const navItems = [
-    { icon: 'layout-dashboard', label: 'Dashboard', active: true },
+    { icon: 'layout-dashboard', label: 'Dashboard' },
     { icon: 'briefcase', label: 'Applications' },
     { icon: 'file-text', label: 'Documents' },
     { icon: 'calendar', label: 'Calendar' },
@@ -31,7 +32,7 @@ export default function Sidebar({ user }: SidebarProps) {
       <div className="flex flex-col gap-1">
         <span className="text-[#A78BFA] text-[10px] font-semibold tracking-[2px] mb-1">MENU</span>
         {navItems.map(item => (
-          <NavItem key={item.label} icon={item.icon} label={item.label} active={item.active} />
+          <NavItem key={item.label} icon={item.icon} label={item.label} active={item.label === activePage} />
         ))}
       </div>
 

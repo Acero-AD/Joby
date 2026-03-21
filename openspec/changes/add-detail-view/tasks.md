@@ -11,8 +11,8 @@
 
 ## 3. Detail View Page
 
-- [ ] 3.1 Create `app/javascript/pages/Positions/Show.tsx` with the full detail layout matching the Pencil design: sidebar, header (back link, title, status badge, edit/delete buttons), and Application Details card (two-column fields: URL, Status, CV File, Created, Updated)
-- [ ] 3.2 Update `Sidebar` component to accept an `activePage` prop and highlight the correct nav item
+- [x] 3.1 Create `app/javascript/pages/Positions/Show.tsx` with the full detail layout matching the Pencil design: sidebar, header (back link, title, status badge, edit/delete buttons), and Application Details card (two-column fields: URL, Status, CV File, Created, Updated)
+- [x] 3.2 Update `Sidebar` component to accept an `activePage` prop and highlight the correct nav item
 
 ## 4. Dashboard Navigation
 
