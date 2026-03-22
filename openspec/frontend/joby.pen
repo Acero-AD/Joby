@@ -1,5 +1,5 @@
 {
-  "version": "2.8",
+  "version": "2.9",
   "children": [
     {
       "type": "prompt",
@@ -6004,6 +6004,334 @@
                       ]
                     }
                   ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "nyqn8",
+      "x": 5276,
+      "y": -1035,
+      "name": "Delete Application Modal",
+      "width": 440,
+      "fill": "#FFFFFF",
+      "cornerRadius": 20,
+      "effect": [
+        {
+          "type": "shadow",
+          "shadowType": "outer",
+          "color": "#18181B22",
+          "offset": {
+            "x": 0,
+            "y": 8
+          },
+          "blur": 32
+        },
+        {
+          "type": "shadow",
+          "shadowType": "outer",
+          "color": "#EF444414",
+          "offset": {
+            "x": 0,
+            "y": 2
+          },
+          "blur": 8
+        }
+      ],
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "C3Ut7",
+          "name": "Modal Header",
+          "width": "fill_container",
+          "padding": [
+            24,
+            28,
+            20,
+            28
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "ESviW",
+              "name": "Header Left",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "3Wiza",
+                  "name": "Warning Icon",
+                  "width": 40,
+                  "height": 40,
+                  "fill": "#FEE2E2",
+                  "cornerRadius": 12,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "ObEQh",
+                      "name": "warnIcon",
+                      "width": 20,
+                      "height": 20,
+                      "iconFontName": "triangle-alert",
+                      "iconFontFamily": "lucide",
+                      "fill": "#EF4444"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "bjDHt",
+                  "name": "title",
+                  "fill": "#1F1F1F",
+                  "content": "Delete Application",
+                  "fontFamily": "Inter",
+                  "fontSize": 18,
+                  "fontWeight": "600"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "mzsDI",
+              "name": "Close Button",
+              "width": 36,
+              "height": 36,
+              "fill": "#F9FAFB",
+              "cornerRadius": 10,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "#F3F4F6"
+              },
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "9r8om",
+                  "name": "closeIcon",
+                  "width": 18,
+                  "height": 18,
+                  "iconFontName": "x",
+                  "iconFontFamily": "lucide",
+                  "fill": "#9CA3AF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "ozQXV",
+          "name": "Divider",
+          "width": "fill_container",
+          "height": 1,
+          "fill": "#F3F4F6"
+        },
+        {
+          "type": "frame",
+          "id": "ArgyO",
+          "name": "Modal Body",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": [
+            20,
+            28
+          ],
+          "children": [
+            {
+              "type": "text",
+              "id": "JkzFt",
+              "name": "bodyText",
+              "fill": "#374151",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Are you sure you want to delete this application?",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "normal"
+            },
+            {
+              "type": "frame",
+              "id": "PO9NU",
+              "name": "Application Card",
+              "width": "fill_container",
+              "fill": "#FEF2F2",
+              "cornerRadius": 10,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#FECACA"
+              },
+              "gap": 12,
+              "padding": [
+                12,
+                14
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "VK5zH",
+                  "name": "appIcon",
+                  "width": 18,
+                  "height": 18,
+                  "iconFontName": "briefcase",
+                  "iconFontFamily": "lucide",
+                  "fill": "#EF4444"
+                },
+                {
+                  "type": "frame",
+                  "id": "H35A2",
+                  "name": "appInfo",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 2,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "OJ6ik",
+                      "name": "appTitle",
+                      "fill": "#1F1F1F",
+                      "content": "Senior Frontend Developer",
+                      "fontFamily": "Inter",
+                      "fontSize": 14,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "qnAsv",
+                      "name": "appCompany",
+                      "fill": "#6B7280",
+                      "content": "Google · Applied Mar 5, 2026",
+                      "fontFamily": "Inter",
+                      "fontSize": 12,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "0ZnsH",
+              "name": "warnNote",
+              "fill": "#9CA3AF",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "This action cannot be undone. All data associated with this application will be permanently removed.",
+              "fontFamily": "Inter",
+              "fontSize": 12,
+              "fontWeight": "normal"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "idJxB",
+          "name": "Divider",
+          "width": "fill_container",
+          "height": 1,
+          "fill": "#F3F4F6"
+        },
+        {
+          "type": "frame",
+          "id": "Js1iq",
+          "name": "Modal Footer",
+          "width": "fill_container",
+          "gap": 12,
+          "padding": [
+            20,
+            28,
+            24,
+            28
+          ],
+          "justifyContent": "end",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "8zx42",
+              "name": "Cancel Button",
+              "fill": "#FFFFFF",
+              "cornerRadius": 10,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1,
+                "fill": "#E5E7EB"
+              },
+              "padding": [
+                10,
+                20
+              ],
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "ccPWt",
+                  "name": "cancelText",
+                  "fill": "#374151",
+                  "content": "Cancel",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "nBQ2M",
+              "name": "Delete Button",
+              "fill": "#EF4444",
+              "cornerRadius": 10,
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#EF444433",
+                "offset": {
+                  "x": 0,
+                  "y": 2
+                },
+                "blur": 8
+              },
+              "gap": 8,
+              "padding": [
+                10,
+                24
+              ],
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "7wbu1",
+                  "name": "delIcon",
+                  "width": 16,
+                  "height": 16,
+                  "iconFontName": "trash-2",
+                  "iconFontFamily": "lucide",
+                  "fill": "#FFFFFF"
+                },
+                {
+                  "type": "text",
+                  "id": "qLqz3",
+                  "name": "delText",
+                  "fill": "#FFFFFF",
+                  "content": "Delete Application",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "500"
                 }
               ]
             }
