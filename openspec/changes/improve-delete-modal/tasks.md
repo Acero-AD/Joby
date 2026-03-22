@@ -15,4 +15,4 @@
 
 ## 4. Testing
 
-- [ ] 4.1 Run the test suite and verify everything passes
+- [x] 4.1 Run the test suite and verify everything passes
