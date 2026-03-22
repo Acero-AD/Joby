@@ -1,22 +1,22 @@
 ## ADDED Requirements
 
 ### Requirement: Applications table displays positions
-The system SHALL render a table of job applications with columns: Job Title (with date), Company/Link, CV Used, Status, and Actions. Each row SHALL be clickable to navigate to the position detail view.
+The system SHALL render a table of job applications with columns: Job Title (with date), Company/Link, CV Used, Status, and Actions. Each row SHALL be clickable to navigate to the position detail view. Column headers, empty state text, and row labels SHALL use translated strings.
 
 #### Scenario: Table displays position data
 - **WHEN** a user has positions in the database
-- **THEN** the table SHALL display each position as a row with title, application date, company name, a "View" link to the job URL, CV filename, status badge, and edit/delete action icons
+- **THEN** the table SHALL display each position as a row with title, translated application date prefix, company name, a translated "View" link, CV filename, status badge, and edit/delete action icons
 
 #### Scenario: Empty state
 - **WHEN** a user has no positions
-- **THEN** the table SHALL display a message indicating no applications exist
+- **THEN** the table SHALL display a translated message indicating no applications exist
 
 #### Scenario: Row click navigates to detail view
 - **WHEN** a user clicks on a position row (outside of action buttons and external links)
 - **THEN** the system SHALL navigate to `/positions/:id` using Inertia
 
 ### Requirement: Status badges use color coding
-The system SHALL display position status as colored pill badges matching the design system.
+The system SHALL display position status as colored pill badges matching the design system. Status labels SHALL use translated strings.
 
 #### Scenario: Interview status badge
 - **WHEN** a position has status "interviewing"
@@ -38,12 +38,16 @@ The system SHALL display position status as colored pill badges matching the des
 - **WHEN** a position has status "bookmarked"
 - **THEN** the badge SHALL display "Bookmarked" with purple background (#F3F0FF) and purple text (#7C3AED)
 
+#### Scenario: Status labels are translated
+- **WHEN** the active language is Spanish
+- **THEN** status badges SHALL display translated labels (e.g., "Aplicado", "Entrevista", "Oferta", "Rechazado")
+
 ### Requirement: Table has pagination
-The system SHALL paginate the applications table, showing 5 rows per page with page navigation controls.
+The system SHALL paginate the applications table, showing 5 rows per page with page navigation controls. Pagination text SHALL use translated strings.
 
 #### Scenario: Pagination displays count
 - **WHEN** a user has 24 positions and is on page 1
-- **THEN** the footer SHALL display "Showing 5 of 24 applications" with page numbers and prev/next buttons
+- **THEN** the footer SHALL display a translated "Showing X of Y applications" text with page numbers and prev/next buttons
 
 #### Scenario: Navigate to next page
 - **WHEN** a user clicks the next page button

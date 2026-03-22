@@ -1,11 +1,11 @@
 ## ADDED Requirements
 
 ### Requirement: Add Application modal form
-The system SHALL display a modal dialog for creating a new position with fields: Job Title, Company, Status (dropdown), URL, CV file upload, and Notes.
+The system SHALL display a modal dialog for creating a new position with fields: Job Title, Company, Status (dropdown), URL, CV file upload, and Notes. All labels, placeholders, and button text SHALL use translated strings.
 
 #### Scenario: Modal opens from Add Application button
 - **WHEN** a user clicks the "Add Application" button in the dashboard header
-- **THEN** a modal SHALL appear with the form fields and a header "Add New Application"
+- **THEN** a modal SHALL appear with translated form labels and a translated header
 
 #### Scenario: Modal can be closed
 - **WHEN** a user clicks the close button (X) on the modal
@@ -35,8 +35,8 @@ The system SHALL allow attaching a CV file (PDF) via the file upload field in th
 - **THEN** the position SHALL be created successfully without a CV attachment
 
 ### Requirement: Status dropdown has predefined options
-The system SHALL display a dropdown with all position statuses: Bookmarked, Applied, Interviewing, Offered, Rejected, Withdrawn, Accepted.
+The system SHALL display a dropdown with all position statuses using translated labels: Bookmarked, Applied, Interviewing, Offered, Rejected, Withdrawn, Accepted.
 
 #### Scenario: Default status selection
 - **WHEN** the modal opens
-- **THEN** the status dropdown SHALL default to "Bookmarked"
+- **THEN** the status dropdown SHALL default to the translated "Bookmarked" option

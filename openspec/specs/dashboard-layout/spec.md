@@ -8,7 +8,7 @@ The system SHALL render the dashboard as the root route (`/`) using Inertia.js w
 - **THEN** the system SHALL render the Dashboard React component via Inertia
 
 ### Requirement: Dashboard has a sidebar
-The system SHALL render a 260px-wide sidebar on the left with a logo, navigation links, and a user profile section at the bottom.
+The system SHALL render a 260px-wide sidebar on the left with a logo, navigation links, and a user profile section at the bottom. Navigation labels SHALL use translated strings.
 
 #### Scenario: Sidebar displays logo
 - **WHEN** the dashboard loads
@@ -16,7 +16,7 @@ The system SHALL render a 260px-wide sidebar on the left with a logo, navigation
 
 #### Scenario: Sidebar displays navigation
 - **WHEN** the dashboard loads
-- **THEN** the sidebar SHALL display navigation items: Dashboard (active), Applications, Documents, Calendar, Settings
+- **THEN** the sidebar SHALL display translated navigation items: Dashboard, Applications, Documents, Calendar, Settings
 
 #### Scenario: Sidebar displays user profile
 - **WHEN** the dashboard loads
@@ -34,15 +34,15 @@ The system SHALL render the main content area to the right of the sidebar, split
 - **THEN** the main area SHALL display a welcome header, stats row, applications table in the left column, and upcoming interviews + quick actions in the right column
 
 ### Requirement: Dashboard header shows welcome message
-The system SHALL display a personalized welcome header with the user's first name and a subtitle.
+The system SHALL display a personalized welcome header with the user's first name and a subtitle, using translated strings.
 
 #### Scenario: Welcome header with user name
 - **WHEN** a user named "Diego" views the dashboard
-- **THEN** the header SHALL display "Welcome back, Diego!" with subtitle "Track and manage your job applications"
+- **THEN** the header SHALL display a translated welcome message with the user's first name and a translated subtitle
 
 ### Requirement: Dashboard header has a search box and add button
-The system SHALL display a search box and an "Add Application" button in the header actions area.
+The system SHALL display a search box and an "Add Application" button in the header actions area, using translated strings.
 
 #### Scenario: Add Application button
-- **WHEN** a user clicks the "Add Application" button
+- **WHEN** a user clicks the translated "Add Application" button
 - **THEN** the Add Application modal SHALL open
