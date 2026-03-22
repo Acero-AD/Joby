@@ -4,8 +4,8 @@
 
 ## 2. Delete Confirmation Modal Component
 
-- [ ] 2.1 Create `app/javascript/components/DeleteConfirmationModal.tsx` matching the Pencil design: warning icon header, position summary card (title + company/date), permanent deletion warning, Cancel/Delete buttons
-- [ ] 2.2 Use i18n translation keys for all modal text
+- [x] 2.1 Create `app/javascript/components/DeleteConfirmationModal.tsx` matching the Pencil design: warning icon header, position summary card (title + company/date), permanent deletion warning, Cancel/Delete buttons
+- [x] 2.2 Use i18n translation keys for all modal text
 
 ## 3. Update Delete Triggers
 
