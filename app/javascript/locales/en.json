@@ -91,6 +91,14 @@
     "noCvAttached": "No CV attached",
     "confirmDelete": "Are you sure you want to delete this application?"
   },
+  "deleteModal": {
+    "title": "Delete Application",
+    "body": "Are you sure you want to delete this application?",
+    "warning": "This action cannot be undone. All data associated with this application will be permanently removed.",
+    "positionContext": "{{company}} · Applied {{date}}",
+    "cancel": "Cancel",
+    "confirm": "Delete Application"
+  },
   "rightSidebar": {
     "upcomingInterviews": "Upcoming Interviews",
     "viewAll": "View all",

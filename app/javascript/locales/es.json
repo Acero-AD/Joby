@@ -91,6 +91,14 @@
     "noCvAttached": "Sin CV adjunto",
     "confirmDelete": "¿Estás seguro de que quieres eliminar esta solicitud?"
   },
+  "deleteModal": {
+    "title": "Eliminar solicitud",
+    "body": "¿Estás seguro de que quieres eliminar esta solicitud?",
+    "warning": "Esta acción no se puede deshacer. Todos los datos asociados con esta solicitud se eliminarán permanentemente.",
+    "positionContext": "{{company}} · Aplicado {{date}}",
+    "cancel": "Cancelar",
+    "confirm": "Eliminar solicitud"
+  },
   "rightSidebar": {
     "upcomingInterviews": "Próximas entrevistas",
     "viewAll": "Ver todo",
