@@ -1,6 +1,7 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { router } from '@inertiajs/react'
+import Icon from './Icon'
 import type { Pagination as PaginationType } from '../types'
 
 interface PaginationProps {
@@ -29,17 +30,7 @@ export default function Pagination({ pagination }: PaginationProps) {
           disabled={page <= 1}
           className="rounded-lg border border-border-medium p-2 px-3 disabled:opacity-40 cursor-pointer disabled:cursor-default"
         >
-          <svg
-            className="w-4 h-4"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="#6B7280"
-            strokeWidth={2}
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="m15 18-6-6 6-6" />
-          </svg>
+          <Icon name="chevron-left" size={16} stroke="#6B7280" />
         </button>
 
         {Array.from({ length: Math.min(totalPages, 3) }, (_, i) => i + 1).map(
@@ -63,17 +54,7 @@ export default function Pagination({ pagination }: PaginationProps) {
           disabled={page >= totalPages}
           className="rounded-lg border border-border-medium p-2 px-3 disabled:opacity-40 cursor-pointer disabled:cursor-default"
         >
-          <svg
-            className="w-4 h-4"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="#6B7280"
-            strokeWidth={2}
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="m9 18 6-6-6-6" />
-          </svg>
+          <Icon name="chevron-right" size={16} stroke="#6B7280" />
         </button>
       </div>
     </div>

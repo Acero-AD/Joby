@@ -1,6 +1,7 @@
 import React from 'react'
 import { useForm } from '@inertiajs/react'
 import { useTranslation } from 'react-i18next'
+import Icon from './Icon'
 
 interface AddApplicationModalProps {
   onClose: () => void
@@ -57,18 +58,7 @@ export default function AddApplicationModal({
             onClick={onClose}
             className="w-9 h-9 rounded-[10px] bg-surface-light border border-border-light flex items-center justify-center cursor-pointer hover:bg-gray-100"
           >
-            <svg
-              className="w-4 h-4"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="#6B7280"
-              strokeWidth={2}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M18 6 6 18" />
-              <path d="m6 6 12 12" />
-            </svg>
+            <Icon name="close" size={16} stroke="#6B7280" />
           </button>
         </div>
 
@@ -135,19 +125,12 @@ export default function AddApplicationModal({
           {/* CV Upload */}
           <Field label={t('modal.fields.cvResume')} error={errors.cv}>
             <div className="flex items-center gap-3 rounded-[10px] border border-dashed border-border-purple py-3 px-4 bg-[#FAF5FF]">
-              <svg
-                className="w-5 h-5 shrink-0"
-                fill="none"
-                viewBox="0 0 24 24"
+              <Icon
+                name="upload"
+                size={20}
+                className="shrink-0"
                 stroke="#A855F7"
-                strokeWidth={2}
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                <polyline points="17 8 12 3 7 8" />
-                <line x1="12" x2="12" y1="3" y2="15" />
-              </svg>
+              />
               <div className="flex-1">
                 <label className="text-primary-purple text-sm font-medium cursor-pointer hover:underline">
                   {data.cv ? data.cv.name : t('modal.fields.chooseFile')}
@@ -171,19 +154,7 @@ export default function AddApplicationModal({
         {/* Footer */}
         <div className="flex items-center justify-between py-5 px-7">
           <div className="flex items-center gap-1.5">
-            <svg
-              className="w-3.5 h-3.5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="#9CA3AF"
-              strokeWidth={2}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <circle cx="12" cy="12" r="10" />
-              <path d="M12 16v-4" />
-              <path d="M12 8h.01" />
-            </svg>
+            <Icon name="info" size={14} stroke="#9CA3AF" />
             <span className="text-text-light text-xs">
               {t('modal.footer.editLater')}
             </span>

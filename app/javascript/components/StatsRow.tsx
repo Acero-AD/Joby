@@ -28,7 +28,7 @@ export default function StatsRow({ stats }: StatsRowProps) {
         iconName="calendar"
         iconColor="#F59E0B"
         iconBg="#FEF3C7"
-        trendIcon="clock-4"
+        trendIcon="clock"
         trendColor="#6B7280"
         changeText={t('stats.scheduled')}
       />
