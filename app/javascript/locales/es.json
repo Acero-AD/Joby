@@ -76,14 +76,14 @@
     }
   },
   "detail": {
-    "backToApplications": "Volver a solicitudes",
+    "backToApplications": "Volver a las solicitudes",
     "edit": "Editar",
     "delete": "Eliminar",
     "applicationDetails": "Detalles de la solicitud",
     "labels": {
       "applicationUrl": "URL de la solicitud",
       "status": "Estado",
-      "cvFile": "Archivo CV",
+      "cvFile": "CV",
       "created": "Creado",
       "lastUpdated": "Última actualización"
     },

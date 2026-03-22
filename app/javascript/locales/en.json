@@ -76,14 +76,14 @@
     }
   },
   "detail": {
-    "backToApplications": "Back to Applications",
+    "backToApplications": "Back to Dashboard",
     "edit": "Edit",
     "delete": "Delete",
     "applicationDetails": "Application Details",
     "labels": {
       "applicationUrl": "Application URL",
       "status": "Status",
-      "cvFile": "CV File",
+      "cvFile": "CV",
       "created": "Created",
       "lastUpdated": "Last Updated"
     },
