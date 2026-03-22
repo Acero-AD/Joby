@@ -9,9 +9,9 @@
 
 ## 3. Update Delete Triggers
 
-- [ ] 3.1 Update `positionActions.ts` to remove the `confirm()` call — export a plain `deletePosition` that only does `router.delete()`
-- [ ] 3.2 Update `ApplicationsTable.tsx` to manage modal state and show `DeleteConfirmationModal` on delete click
-- [ ] 3.3 Update `Positions/Show.tsx` to manage modal state and show `DeleteConfirmationModal` on delete click
+- [x] 3.1 Update `positionActions.ts` to remove the `confirm()` call — export a plain `deletePosition` that only does `router.delete()`
+- [x] 3.2 Update `ApplicationsTable.tsx` to manage modal state and show `DeleteConfirmationModal` on delete click
+- [x] 3.3 Update `Positions/Show.tsx` to manage modal state and show `DeleteConfirmationModal` on delete click
 
 ## 4. Testing
 

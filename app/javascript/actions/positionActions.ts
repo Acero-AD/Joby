@@ -1,5 +1,4 @@
 import { router } from '@inertiajs/react'
-import i18n from '../i18n'
 
 export function navigateToPosition(id: number) {
   router.visit(`/positions/${id}`)
@@ -9,12 +8,16 @@ export function navigateToDashboard() {
   router.visit('/')
 }
 
-export function deletePosition(id: number) {
-  if (confirm(i18n.t('detail.confirmDelete'))) {
-    router.delete(`/positions/${id}`, {
-      onSuccess: () => navigateToDashboard()
-    })
-  }
+export function deletePosition(id: number, { onSuccess }: { onSuccess?: () => void } = {}) {
+  router.delete(`/positions/${id}`, {
+    onSuccess: () => {
+      if (onSuccess) {
+        onSuccess()
+      } else {
+        navigateToDashboard()
+      }
+    }
+  })
 }
 
 export function handleRowClick(e: React.MouseEvent, positionId: number) {

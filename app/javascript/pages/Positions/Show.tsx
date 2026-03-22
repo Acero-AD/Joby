@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import Sidebar from '../../components/Sidebar'
 import StatusBadge from '../../components/StatusBadge'
+import DeleteConfirmationModal from '../../components/DeleteConfirmationModal'
 import { deletePosition, navigateToDashboard } from '../../actions/positionActions'
 import type { Position, User } from '../../types'
 
@@ -12,6 +13,7 @@ interface ShowProps {
 
 export default function PositionShow({ user, position }: ShowProps) {
   const { t } = useTranslation()
+  const [showDeleteModal, setShowDeleteModal] = useState(false)
 
   return (
     <div className="flex w-[1440px] h-[900px] mx-auto rounded-[20px] bg-gradient-to-br from-bg-start via-bg-mid1 via-70% to-bg-end">
@@ -45,7 +47,7 @@ export default function PositionShow({ user, position }: ShowProps) {
                 <span className="text-[#A855F7] text-sm font-medium">{t('detail.edit')}</span>
               </button>
               <button
-                onClick={() => deletePosition(position.id)}
+                onClick={() => setShowDeleteModal(true)}
                 className="flex items-center gap-1.5 rounded-[10px] border border-[#EF4444] py-2 px-4 cursor-pointer hover:bg-red-50"
               >
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="#EF4444" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
@@ -141,6 +143,14 @@ export default function PositionShow({ user, position }: ShowProps) {
           </div>
         </div>
       </div>
+
+      {showDeleteModal && (
+        <DeleteConfirmationModal
+          position={position}
+          onConfirm={() => deletePosition(position.id)}
+          onClose={() => setShowDeleteModal(false)}
+        />
+      )}
     </div>
   )
 }

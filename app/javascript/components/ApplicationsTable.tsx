@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import StatusBadge from './StatusBadge'
 import Pagination from './Pagination'
+import DeleteConfirmationModal from './DeleteConfirmationModal'
 import { deletePosition, handleRowClick } from '../actions/positionActions'
 import type { Position, Pagination as PaginationType } from '../types'
 
@@ -12,6 +13,7 @@ interface ApplicationsTableProps {
 
 export default function ApplicationsTable({ positions, pagination }: ApplicationsTableProps) {
   const { t } = useTranslation()
+  const [deletingPosition, setDeletingPosition] = useState<Position | null>(null)
 
   return (
     <div className="flex-1 bg-white rounded-[14px] shadow-[0_2px_12px_#A855F712] flex flex-col overflow-hidden">
@@ -96,7 +98,7 @@ export default function ApplicationsTable({ positions, pagination }: Application
                     <path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z" />
                   </svg>
                 </button>
-                <button onClick={() => deletePosition(pos.id)} className="cursor-pointer hover:opacity-70">
+                <button onClick={() => setDeletingPosition(pos)} className="cursor-pointer hover:opacity-70">
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="#D4D4D8" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
                     <path d="M3 6h18" /><path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" /><path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" />
                   </svg>
@@ -109,6 +111,14 @@ export default function ApplicationsTable({ positions, pagination }: Application
 
       {/* Pagination */}
       {pagination.total > 0 && <Pagination pagination={pagination} />}
+
+      {deletingPosition && (
+        <DeleteConfirmationModal
+          position={deletingPosition}
+          onConfirm={() => deletePosition(deletingPosition.id, { onSuccess: () => setDeletingPosition(null) })}
+          onClose={() => setDeletingPosition(null)}
+        />
+      )}
     </div>
   )
 }
