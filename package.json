@@ -4,7 +4,11 @@
   "scripts": {
     "build": "bun bun.config.js",
     "build:css": "bunx @tailwindcss/cli -i app/assets/stylesheets/application.css -o app/assets/builds/application.css",
-    "build:css:watch": "bunx @tailwindcss/cli -i app/assets/stylesheets/application.css -o app/assets/builds/application.css --watch"
+    "build:css:watch": "bunx @tailwindcss/cli -i app/assets/stylesheets/application.css -o app/assets/builds/application.css --watch",
+    "lint": "bunx eslint app/javascript/",
+    "lint:fix": "bunx eslint app/javascript/ --fix",
+    "format": "bunx prettier --write app/javascript/",
+    "format:check": "bunx prettier --check app/javascript/"
   },
   "dependencies": {
     "@hotwired/stimulus": "^3.2.2",
@@ -19,8 +23,15 @@
     "tailwindcss": "^4.2.1"
   },
   "devDependencies": {
+    "@eslint/js": "9",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
-    "typescript": "^5.9.3"
+    "eslint": "9",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "prettier": "^3.8.1",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.57.1"
   }
 }

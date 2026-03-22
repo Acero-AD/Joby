@@ -2,10 +2,12 @@ import './i18n'
 import { createInertiaApp, type ResolvedComponent } from '@inertiajs/react'
 import { createRoot } from 'react-dom/client'
 
+/* eslint-disable @typescript-eslint/no-require-imports */
 const pages: Record<string, () => ResolvedComponent> = {
   'Dashboard/Index': () => require('./pages/Dashboard/Index.tsx'),
   'Positions/Show': () => require('./pages/Positions/Show.tsx'),
 }
+/* eslint-enable @typescript-eslint/no-require-imports */
 
 createInertiaApp({
   resolve: (name: string) => {

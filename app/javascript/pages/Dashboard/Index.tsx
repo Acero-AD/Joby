@@ -7,7 +7,12 @@ import RightSidebar from '../../components/RightSidebar'
 import AddApplicationModal from '../../components/AddApplicationModal'
 import type { DashboardProps } from '../../types'
 
-export default function DashboardIndex({ user, positions, stats, pagination }: DashboardProps) {
+export default function DashboardIndex({
+  user,
+  positions,
+  stats,
+  pagination,
+}: DashboardProps) {
   const [showModal, setShowModal] = useState(false)
 
   return (
@@ -24,9 +29,7 @@ export default function DashboardIndex({ user, positions, stats, pagination }: D
         <RightSidebar />
       </div>
 
-      {showModal && (
-        <AddApplicationModal onClose={() => setShowModal(false)} />
-      )}
+      {showModal && <AddApplicationModal onClose={() => setShowModal(false)} />}
     </div>
   )
 }

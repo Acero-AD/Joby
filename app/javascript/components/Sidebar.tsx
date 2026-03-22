@@ -17,7 +17,10 @@ const navKeys = [
   { icon: 'settings', key: 'sidebar.nav.settings' },
 ]
 
-export default function Sidebar({ user, activePage = 'Dashboard' }: SidebarProps) {
+export default function Sidebar({
+  user,
+  activePage = 'Dashboard',
+}: SidebarProps) {
   const { t } = useTranslation()
   const initial = user?.name?.charAt(0) || 'U'
 
@@ -28,16 +31,25 @@ export default function Sidebar({ user, activePage = 'Dashboard' }: SidebarProps
         <div className="w-10 h-10 rounded-[20px] bg-gradient-to-br from-primary-purple to-primary-pink flex items-center justify-center">
           <span className="text-white text-xl font-bold">J</span>
         </div>
-        <span className="text-text-primary text-[22px] font-extrabold">Joby</span>
+        <span className="text-text-primary text-[22px] font-extrabold">
+          Joby
+        </span>
       </div>
 
       {/* Navigation */}
       <div className="flex flex-col gap-1">
-        <span className="text-[#A78BFA] text-[10px] font-semibold tracking-[2px] mb-1">{t('sidebar.menu')}</span>
-        {navKeys.map(item => {
+        <span className="text-[#A78BFA] text-[10px] font-semibold tracking-[2px] mb-1">
+          {t('sidebar.menu')}
+        </span>
+        {navKeys.map((item) => {
           const label = t(item.key)
           return (
-            <NavItem key={item.key} icon={item.icon} label={label} active={label === t(`sidebar.nav.${activePage.toLowerCase()}`)} />
+            <NavItem
+              key={item.key}
+              icon={item.icon}
+              label={label}
+              active={label === t(`sidebar.nav.${activePage.toLowerCase()}`)}
+            />
           )
         })}
       </div>
@@ -53,7 +65,9 @@ export default function Sidebar({ user, activePage = 'Dashboard' }: SidebarProps
           <span className="text-white text-base font-semibold">{initial}</span>
         </div>
         <div className="flex flex-col gap-0.5">
-          <span className="text-text-primary text-sm font-semibold">{user?.name || 'User'}</span>
+          <span className="text-text-primary text-sm font-semibold">
+            {user?.name || 'User'}
+          </span>
           <span className="text-text-muted text-xs">{t('sidebar.role')}</span>
         </div>
       </div>

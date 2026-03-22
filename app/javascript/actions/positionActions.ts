@@ -8,7 +8,10 @@ export function navigateToDashboard() {
   router.visit('/')
 }
 
-export function deletePosition(id: number, { onSuccess }: { onSuccess?: () => void } = {}) {
+export function deletePosition(
+  id: number,
+  { onSuccess }: { onSuccess?: () => void } = {},
+) {
   router.delete(`/positions/${id}`, {
     onSuccess: () => {
       if (onSuccess) {
@@ -16,7 +19,7 @@ export function deletePosition(id: number, { onSuccess }: { onSuccess?: () => vo
       } else {
         navigateToDashboard()
       }
-    }
+    },
   })
 }
 
