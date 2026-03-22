@@ -2,20 +2,11 @@ import React from 'react'
 import { useForm } from '@inertiajs/react'
 import { useTranslation } from 'react-i18next'
 import Icon from './Icon'
+import { statusKeys } from '../config/statusConfig'
 
 interface AddApplicationModalProps {
   onClose: () => void
 }
-
-const statusKeys = [
-  'bookmarked',
-  'applied',
-  'interviewing',
-  'offered',
-  'rejected',
-  'withdrawn',
-  'accepted',
-]
 
 export default function AddApplicationModal({
   onClose,
