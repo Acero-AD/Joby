@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next'
 import StatusBadge from './StatusBadge'
 import Pagination from './Pagination'
 import DeleteConfirmationModal from './DeleteConfirmationModal'
+import EditApplicationModal from './EditApplicationModal'
 import Icon from './Icon'
 import { deletePosition, handleRowClick } from '../actions/positionActions'
 import type { Position, Pagination as PaginationType } from '../types'
@@ -20,6 +21,7 @@ export default function ApplicationsTable({
   const [deletingPosition, setDeletingPosition] = useState<Position | null>(
     null,
   )
+  const [editingPosition, setEditingPosition] = useState<Position | null>(null)
 
   return (
     <div className="flex-1 bg-white rounded-[14px] shadow-[0_2px_12px_#A855F712] flex flex-col overflow-hidden">
@@ -134,7 +136,10 @@ export default function ApplicationsTable({
 
               {/* Actions */}
               <div className="w-[80px] flex items-center gap-2">
-                <button className="cursor-pointer hover:opacity-70">
+                <button
+                  onClick={() => setEditingPosition(pos)}
+                  className="cursor-pointer hover:opacity-70"
+                >
                   <Icon name="edit" size={16} stroke="#A78BFA" />
                 </button>
                 <button
@@ -151,6 +156,13 @@ export default function ApplicationsTable({
 
       {/* Pagination */}
       {pagination.total > 0 && <Pagination pagination={pagination} />}
+
+      {editingPosition && (
+        <EditApplicationModal
+          position={editingPosition}
+          onClose={() => setEditingPosition(null)}
+        />
+      )}
 
       {deletingPosition && (
         <DeleteConfirmationModal

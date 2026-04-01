@@ -6,8 +6,8 @@
 
 ## 2. Wire Edit Buttons
 
-- [ ] 2.1 Add `editingPosition` state and `EditApplicationModal` rendering to `ApplicationsTable.tsx`, wire the edit button's `onClick`
-- [ ] 2.2 Add `editingPosition` state and `EditApplicationModal` rendering to `Show.tsx`, wire the edit button's `onClick`
+- [x] 2.1 Add `editingPosition` state and `EditApplicationModal` rendering to `ApplicationsTable.tsx`, wire the edit button's `onClick`
+- [x] 2.2 Add `editingPosition` state and `EditApplicationModal` rendering to `Show.tsx`, wire the edit button's `onClick`
 
 ## 3. Verify
 

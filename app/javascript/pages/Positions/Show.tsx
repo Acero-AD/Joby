@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next'
 import Sidebar from '../../components/Sidebar'
 import StatusBadge from '../../components/StatusBadge'
 import DeleteConfirmationModal from '../../components/DeleteConfirmationModal'
+import EditApplicationModal from '../../components/EditApplicationModal'
 import Icon from '../../components/Icon'
 import {
   deletePosition,
@@ -18,6 +19,7 @@ interface ShowProps {
 export default function PositionShow({ user, position }: ShowProps) {
   const { t } = useTranslation()
   const [showDeleteModal, setShowDeleteModal] = useState(false)
+  const [showEditModal, setShowEditModal] = useState(false)
 
   return (
     <div className="flex w-[1440px] h-[900px] mx-auto rounded-[20px] bg-gradient-to-br from-bg-start via-bg-mid1 via-70% to-bg-end">
@@ -47,7 +49,10 @@ export default function PositionShow({ user, position }: ShowProps) {
             </div>
 
             <div className="flex items-center gap-2.5">
-              <button className="flex items-center gap-1.5 rounded-[10px] border border-[#A855F7] py-2 px-4 cursor-pointer hover:bg-purple-50">
+              <button
+                onClick={() => setShowEditModal(true)}
+                className="flex items-center gap-1.5 rounded-[10px] border border-[#A855F7] py-2 px-4 cursor-pointer hover:bg-purple-50"
+              >
                 <Icon name="edit" size={16} stroke="#A855F7" />
                 <span className="text-[#A855F7] text-sm font-medium">
                   {t('detail.edit')}
@@ -187,6 +192,13 @@ export default function PositionShow({ user, position }: ShowProps) {
           </div>
         </div>
       </div>
+
+      {showEditModal && (
+        <EditApplicationModal
+          position={position}
+          onClose={() => setShowEditModal(false)}
+        />
+      )}
 
       {showDeleteModal && (
         <DeleteConfirmationModal
