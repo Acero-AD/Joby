@@ -7,6 +7,10 @@ The system SHALL display a header with a translated "Back to Applications" link,
 - **WHEN** a user navigates to `/positions/:id`
 - **THEN** the page SHALL display the position title as a heading, a color-coded status badge, a translated "Edit" button with pencil icon, and a translated "Delete" button with trash icon
 
+#### Scenario: Edit button opens edit modal
+- **WHEN** the user clicks the "Edit" button in the detail view header
+- **THEN** the system SHALL open the `EditApplicationModal` pre-filled with the position's data
+
 #### Scenario: Back link navigates to dashboard
 - **WHEN** a user clicks the translated "Back to Applications" link
 - **THEN** the system SHALL navigate back to the dashboard

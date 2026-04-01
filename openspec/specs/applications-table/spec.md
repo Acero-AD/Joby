@@ -69,7 +69,11 @@ The system SHALL display edit (pencil) and delete (trash) icons for each table r
 
 #### Scenario: Edit a position
 - **WHEN** a user clicks the edit icon on a position row
-- **THEN** the system SHALL open the edit form for that position
+- **THEN** the system SHALL open the `EditApplicationModal` pre-filled with that position's data
+
+#### Scenario: Edit click does not navigate
+- **WHEN** the user clicks the edit button
+- **THEN** the row click navigation is prevented (existing `handleRowClick` guard on buttons)
 
 ### Requirement: View link opens job URL
 The system SHALL display a "View" link badge next to each company name that opens the position's URL.
