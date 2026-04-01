@@ -20,13 +20,11 @@ export default function EditApplicationModal({
     company: position.company || '',
     url: position.url || '',
     status: position.status || 'bookmarked',
-    cv: null as File | null,
   })
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     put(`/positions/${position.id}`, {
-      forceFormData: true,
       onSuccess: () => onClose(),
     })
   }
@@ -118,31 +116,18 @@ export default function EditApplicationModal({
             />
           </Field>
 
-          {/* CV Upload */}
-          <Field label={t('modal.fields.cvResume')} error={errors.cv}>
-            <div className="flex items-center gap-3 rounded-[10px] border border-dashed border-border-purple py-3 px-4 bg-[#FAF5FF]">
+          {/* CV (read-only) */}
+          <Field label={t('modal.fields.cvResume')}>
+            <div className="flex items-center gap-3 rounded-[10px] border border-border-light py-3 px-4 bg-surface-light">
               <Icon
-                name="upload"
+                name="file-text"
                 size={20}
                 className="shrink-0"
                 stroke="#A855F7"
               />
-              <div className="flex-1">
-                <label className="text-primary-purple text-sm font-medium cursor-pointer hover:underline">
-                  {data.cv
-                    ? data.cv.name
-                    : position.cvFilename || t('modal.fields.chooseFile')}
-                  <input
-                    type="file"
-                    accept=".pdf,.doc,.docx"
-                    onChange={(e) => setData('cv', e.target.files?.[0] ?? null)}
-                    className="hidden"
-                  />
-                </label>
-                <p className="text-text-light text-xs mt-0.5">
-                  {t('modal.fields.fileHint')}
-                </p>
-              </div>
+              <span className="text-text-secondary text-sm">
+                {position.cvFilename || t('detail.noCvAttached')}
+              </span>
             </div>
           </Field>
         </form>
