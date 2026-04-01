@@ -11,4 +11,4 @@
 
 ## 3. Verify
 
-- [ ] 3.1 Run `bin/rails test` to ensure no regressions
+- [x] 3.1 Run `bin/rails test` to ensure no regressions
