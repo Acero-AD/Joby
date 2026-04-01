@@ -75,6 +75,11 @@
       "save": "Save Application"
     }
   },
+  "editModal": {
+    "title": "Edit Application",
+    "subtitle": "Update your job application details",
+    "save": "Save Changes"
+  },
   "detail": {
     "backToApplications": "Back to Dashboard",
     "edit": "Edit",
