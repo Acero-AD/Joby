@@ -11,11 +11,11 @@
 
 ## 3. Mobile Navigation
 
-- [ ] 3.1 Create `TopAppBar` component with Joby logo and hamburger menu button (mobile only)
-- [ ] 3.2 Add drawer open/close state to pages, pass down to Sidebar and TopAppBar
-- [ ] 3.3 Render Sidebar as a fixed full-height overlay drawer on mobile with semi-transparent backdrop
-- [ ] 3.4 Close drawer on backdrop tap and on navigation (hook into Inertia router events)
-- [ ] 3.5 Render `TopAppBar` on mobile (`block lg:hidden`) in both Dashboard and Position Show pages
+- [x] 3.1 Create `TopAppBar` component with Joby logo and hamburger menu button (mobile only)
+- [x] 3.2 Add drawer open/close state to pages, pass down to Sidebar and TopAppBar
+- [x] 3.3 Render Sidebar as a fixed full-height overlay drawer on mobile with semi-transparent backdrop
+- [x] 3.4 Close drawer on backdrop tap and on navigation (hook into Inertia router events)
+- [x] 3.5 Render `TopAppBar` on mobile (`block lg:hidden`) in both Dashboard and Position Show pages
 
 ## 4. Stats Row
 

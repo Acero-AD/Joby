@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Sidebar from '../../components/Sidebar'
+import TopAppBar from '../../components/TopAppBar'
 import Header from '../../components/Header'
 import StatsRow from '../../components/StatsRow'
 import ApplicationsTable from '../../components/ApplicationsTable'
@@ -14,10 +15,12 @@ export default function DashboardIndex({
   pagination,
 }: DashboardProps) {
   const [showModal, setShowModal] = useState(false)
+  const [drawerOpen, setDrawerOpen] = useState(false)
 
   return (
-    <div className="flex w-full min-h-screen lg:rounded-[20px] bg-gradient-to-br from-bg-start via-bg-mid1 via-70% to-bg-end">
-      <Sidebar user={user} />
+    <div className="flex flex-col w-full min-h-screen lg:flex-row lg:rounded-[20px] bg-gradient-to-br from-bg-start via-bg-mid1 via-70% to-bg-end">
+      <TopAppBar onMenuClick={() => setDrawerOpen(true)} />
+      <Sidebar user={user} open={drawerOpen} onClose={() => setDrawerOpen(false)} />
 
       <div className="flex flex-1 gap-6 p-7 px-8">
         <div className="flex flex-col flex-1 gap-6">
