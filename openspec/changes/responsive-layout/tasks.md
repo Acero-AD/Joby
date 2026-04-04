@@ -34,9 +34,9 @@
 
 ## 7. Modals — Mobile Full-Screen
 
-- [ ] 7.1 Update `AddApplicationModal` to render full-screen on mobile (`sm:` gets centered overlay, mobile gets full-screen sheet)
-- [ ] 7.2 Update `EditApplicationModal` to render full-screen on mobile
-- [ ] 7.3 Update `DeleteConfirmationModal` to render full-screen on mobile
+- [x] 7.1 Update `AddApplicationModal` to render full-screen on mobile (`sm:` gets centered overlay, mobile gets full-screen sheet)
+- [x] 7.2 Update `EditApplicationModal` to render full-screen on mobile
+- [x] 7.3 Update `DeleteConfirmationModal` to render full-screen on mobile
 
 ## 8. Position Detail View
 

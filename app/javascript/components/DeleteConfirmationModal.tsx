@@ -18,11 +18,11 @@ export default function DeleteConfirmationModal({
 
   return (
     <div
-      className="fixed inset-0 bg-black/30 flex items-center justify-center z-50"
+      className="fixed inset-0 bg-black/30 flex items-end sm:items-center justify-center z-50"
       onClick={onClose}
     >
       <div
-        className="bg-white rounded-[20px] w-[440px] shadow-[0_8px_32px_#18181B22,0_2px_8px_#EF444414] flex flex-col"
+        className="bg-white w-full rounded-t-[20px] sm:rounded-[20px] sm:w-[440px] max-h-[90vh] overflow-y-auto shadow-[0_8px_32px_#18181B22,0_2px_8px_#EF444414] flex flex-col"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
