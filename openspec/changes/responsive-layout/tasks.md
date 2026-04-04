@@ -40,9 +40,9 @@
 
 ## 8. Position Detail View
 
-- [ ] 8.1 Stack the two-column application details card to single column on mobile and tablet (`flex-col lg:flex-row`)
-- [ ] 8.2 Render `TopAppBar` on mobile in Position Show page
+- [x] 8.1 Stack the two-column application details card to single column on mobile and tablet (`flex-col lg:flex-row`)
+- [x] 8.2 Render `TopAppBar` on mobile in Position Show page
 
 ## 9. Touch & Accessibility
 
-- [ ] 9.1 Ensure all interactive elements (buttons, row taps) have a minimum touch target of 44px on mobile
+- [x] 9.1 Ensure all interactive elements (buttons, row taps) have a minimum touch target of 44px on mobile

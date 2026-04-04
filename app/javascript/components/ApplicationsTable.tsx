@@ -149,16 +149,16 @@ export default function ApplicationsTable({
                 </div>
 
                 {/* Actions */}
-                <div className="w-[80px] flex items-center gap-2">
+                <div className="w-[80px] flex items-center gap-1">
                   <button
                     onClick={() => setEditingPosition(pos)}
-                    className="cursor-pointer hover:opacity-70"
+                    className="min-w-[36px] min-h-[36px] flex items-center justify-center cursor-pointer hover:opacity-70"
                   >
                     <Icon name="edit" size={16} stroke="#A78BFA" />
                   </button>
                   <button
                     onClick={() => setDeletingPosition(pos)}
-                    className="cursor-pointer hover:opacity-70"
+                    className="min-w-[36px] min-h-[36px] flex items-center justify-center cursor-pointer hover:opacity-70"
                   >
                     <Icon name="trash" size={16} stroke="#D4D4D8" />
                   </button>

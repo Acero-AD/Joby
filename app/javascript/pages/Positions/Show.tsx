@@ -81,7 +81,7 @@ export default function PositionShow({ user, position }: ShowProps) {
           </span>
           <div className="h-px bg-[#F3F4F6]" />
 
-          <div className="flex gap-8">
+          <div className="flex flex-col gap-5 lg:flex-row lg:gap-8">
             {/* Left Column */}
             <div className="flex-1 flex flex-col gap-5">
               {/* Application URL */}
