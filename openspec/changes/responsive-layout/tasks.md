@@ -23,14 +23,14 @@
 
 ## 5. Applications Table — Card List
 
-- [ ] 5.1 Create `PositionCard` component displaying job title, company, status badge, date, and edit/delete actions
-- [ ] 5.2 Render `PositionCard` list on mobile (below `sm:`) inside `ApplicationsTable`
-- [ ] 5.3 Hide the existing table on mobile, show only on `sm:` and above
+- [x] 5.1 Create `PositionCard` component displaying job title, company, status badge, date, and edit/delete actions
+- [x] 5.2 Render `PositionCard` list on mobile (below `sm:`) inside `ApplicationsTable`
+- [x] 5.3 Hide the existing table on mobile, show only on `sm:` and above
 
 ## 6. Applications Table — Tablet Compact
 
-- [ ] 6.1 Replace fixed-pixel column widths with flexible widths on the table for tablet
-- [ ] 6.2 Hide the CV column on tablet (`hidden lg:flex` on that column)
+- [x] 6.1 Replace fixed-pixel column widths with flexible widths on the table for tablet
+- [x] 6.2 Hide the CV column on tablet (`hidden lg:flex` on that column)
 
 ## 7. Modals — Mobile Full-Screen
 
