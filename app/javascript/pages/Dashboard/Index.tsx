@@ -16,7 +16,7 @@ export default function DashboardIndex({
   const [showModal, setShowModal] = useState(false)
 
   return (
-    <div className="flex w-[1440px] h-[900px] mx-auto rounded-[20px] bg-gradient-to-br from-bg-start via-bg-mid1 via-70% to-bg-end">
+    <div className="flex w-full min-h-screen lg:rounded-[20px] bg-gradient-to-br from-bg-start via-bg-mid1 via-70% to-bg-end">
       <Sidebar user={user} />
 
       <div className="flex flex-1 gap-6 p-7 px-8">
@@ -26,7 +26,7 @@ export default function DashboardIndex({
           <ApplicationsTable positions={positions} pagination={pagination} />
         </div>
 
-        <RightSidebar />
+        <div className="hidden lg:block"><RightSidebar /></div>
       </div>
 
       {showModal && <AddApplicationModal onClose={() => setShowModal(false)} />}

@@ -22,7 +22,7 @@ export default function PositionShow({ user, position }: ShowProps) {
   const [showEditModal, setShowEditModal] = useState(false)
 
   return (
-    <div className="flex w-[1440px] h-[900px] mx-auto rounded-[20px] bg-gradient-to-br from-bg-start via-bg-mid1 via-70% to-bg-end">
+    <div className="flex w-full min-h-screen lg:rounded-[20px] bg-gradient-to-br from-bg-start via-bg-mid1 via-70% to-bg-end">
       <Sidebar user={user} activePage="Applications" />
 
       <div className="flex flex-col flex-1 gap-6 p-7 px-8">
