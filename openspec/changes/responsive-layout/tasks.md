@@ -6,8 +6,8 @@
 
 ## 2. Sidebar — Desktop & Tablet
 
-- [ ] 2.1 Add icon-only collapsed mode to Sidebar for tablet (`sm:` to `lg:` range): show only nav icons, hide labels, language switcher, and user profile
-- [ ] 2.2 Adjust sidebar width to `w-16` on tablet and `w-[260px]` on desktop
+- [x] 2.1 Add icon-only collapsed mode to Sidebar for tablet (`sm:` to `lg:` range): show only nav icons, hide labels, language switcher, and user profile
+- [x] 2.2 Adjust sidebar width to `w-16` on tablet and `w-[260px]` on desktop
 
 ## 3. Mobile Navigation
 
