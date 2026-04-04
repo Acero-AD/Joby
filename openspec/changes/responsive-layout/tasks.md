@@ -19,7 +19,7 @@
 
 ## 4. Stats Row
 
-- [ ] 4.1 Make `StatsRow` wrap to a 2×2 grid on mobile (`grid grid-cols-2 lg:flex`)
+- [x] 4.1 Make `StatsRow` wrap to a 2×2 grid on mobile (`grid grid-cols-2 lg:flex`)
 
 ## 5. Applications Table — Card List
 

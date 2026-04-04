@@ -16,7 +16,7 @@ export default function StatsRow({ stats }: StatsRowProps) {
   const rejected = statuses.rejected.statCard!
 
   return (
-    <div className="flex gap-5">
+    <div className="grid grid-cols-2 gap-3 lg:flex lg:gap-5">
       <StatCard
         label={t('stats.totalApplications')}
         value={stats.total}
