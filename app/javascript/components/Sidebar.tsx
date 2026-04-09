@@ -107,7 +107,7 @@ export default function Sidebar({
       )}
 
       {/* Tablet: icon-only inline sidebar */}
-      <div className="hidden sm:flex lg:hidden h-full bg-surface-light border-r border-border-light flex-col gap-7 shrink-0 w-16 items-center py-7 px-2">
+      <div className="hidden sm:flex lg:hidden bg-surface-light border-r border-border-light flex-col gap-7 shrink-0 w-16 items-center self-start py-7 px-2">
         <div className="w-10 h-10 rounded-[20px] bg-gradient-to-br from-primary-purple to-primary-pink flex items-center justify-center shrink-0">
           <span className="text-white text-xl font-bold">J</span>
         </div>
