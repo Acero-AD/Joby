@@ -106,27 +106,7 @@ export default function Sidebar({
         </div>
       )}
 
-      {/* Tablet: icon-only inline sidebar */}
-      <div className="hidden sm:flex lg:hidden shrink-0 border-r border-border-light bg-surface-light flex-col items-center gap-7 py-7 px-2 w-16 sm:self-stretch">
-        <div className="w-10 h-10 rounded-[20px] bg-gradient-to-br from-primary-purple to-primary-pink flex items-center justify-center shrink-0">
-          <span className="text-white text-xl font-bold">J</span>
-        </div>
-        <div className="flex flex-col gap-1 w-full">
-          {navKeys.map((item) => {
-            const label = t(item.key)
-            return (
-              <NavItem
-                key={item.key}
-                icon={item.icon}
-                label={label}
-                active={label === t(`sidebar.nav.${activePage.toLowerCase()}`)}
-              />
-            )
-          })}
-        </div>
-      </div>
-
-      {/* Desktop: full sidebar */}
+      {/* Desktop: full sidebar (below lg: nav only via TopAppBar + drawer) */}
       <div className="hidden lg:flex h-full bg-surface-light border-r border-border-light flex-col gap-7 shrink-0 w-[260px] p-7 px-5 rounded-l-[20px]">
         {/* Logo */}
         <div className="flex items-center gap-3">

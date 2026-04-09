@@ -20,7 +20,7 @@ export default function DashboardIndex({
   return (
     <div className="flex flex-col w-full min-h-screen lg:flex-row lg:rounded-[20px] bg-gradient-to-br from-bg-start via-bg-mid1 via-70% to-bg-end">
       <TopAppBar onMenuClick={() => setDrawerOpen(true)} />
-      <div className="flex min-h-0 min-w-0 flex-1 flex-col sm:flex-row">
+      <div className="flex min-h-0 min-w-0 flex-1 flex-col lg:flex-row">
         <Sidebar user={user} open={drawerOpen} onClose={() => setDrawerOpen(false)} />
 
         <div className="flex min-h-0 min-w-0 flex-1 flex-row gap-6 p-7 px-8">
