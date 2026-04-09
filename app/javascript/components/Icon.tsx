@@ -157,6 +157,13 @@ const icons: Record<string, React.ReactNode> = {
       <path d="M12 8h.01" />
     </>
   ),
+  menu: (
+    <>
+      <line x1="4" x2="20" y1="6" y2="6" />
+      <line x1="4" x2="20" y1="12" y2="12" />
+      <line x1="4" x2="20" y1="18" y2="18" />
+    </>
+  ),
   filter: (
     <>
       <line x1="21" x2="14" y1="4" y2="4" />
