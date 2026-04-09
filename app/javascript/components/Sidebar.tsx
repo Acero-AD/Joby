@@ -39,19 +39,17 @@ export default function Sidebar({
 
   const sidebarContent = (
     <div className="h-full bg-surface-light border-r border-border-light flex flex-col gap-7 shrink-0 w-[260px] p-7 px-5">
-      {/* Logo */}
-      <div className="flex items-center justify-center lg:justify-start lg:gap-3">
+      {/* Logo (drawer: same as desktop — wordmark + icon) */}
+      <div className="flex items-center gap-3">
         <div className="w-10 h-10 rounded-[20px] bg-gradient-to-br from-primary-purple to-primary-pink flex items-center justify-center shrink-0">
           <span className="text-white text-xl font-bold">J</span>
         </div>
-        <span className="hidden lg:inline text-text-primary text-[22px] font-extrabold">
-          Joby
-        </span>
+        <span className="text-text-primary text-[22px] font-extrabold">Joby</span>
       </div>
 
       {/* Navigation */}
       <div className="flex flex-col gap-1 w-full">
-        <span className="hidden lg:block text-[#A78BFA] text-[10px] font-semibold tracking-[2px] mb-1">
+        <span className="text-[#A78BFA] text-[10px] font-semibold tracking-[2px] mb-1">
           {t('sidebar.menu')}
         </span>
         {navKeys.map((item) => {
@@ -62,6 +60,7 @@ export default function Sidebar({
               icon={item.icon}
               label={label}
               active={label === t(`sidebar.nav.${activePage.toLowerCase()}`)}
+              showLabels
             />
           )
         })}
